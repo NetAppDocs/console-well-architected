@@ -1,0 +1,95 @@
+---
+sidebar: sidebar
+permalink: learn-custom-rules.html
+keywords: custom rules, byor, bring your own rules, fsx, ontap, well architected, organizational standards
+summary: Learn how to define and manage your own architectural rules to enforce organizational standards alongside NetApp best practices.
+---
+
+= Learn about custom rules
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Custom rules let you set, check, and enforce your own architecture standards, along with NetApp best practices, in the Well-architected dashboard.
+
+== Overview
+
+The Rule builder lets you create custom best-practice rules using plain language. These rules are checked across all of your resources.
+
+Your custom rules are treated the same as built-in NetApp rules. They run on the same engine, on the same schedule, and appear in the same views and workflows.
+
+Custom rules help you enforce your organization's standards, risk limits, and operational requirements—things that generic vendor rules may not fully cover.
+
+== How custom rules work
+
+Custom rules use an AI-guided process that turns your plain-language instructions into clear, structured rules. The AI acts as a translator and checker. It suggests a rule, explains how it understood your request, and asks for your approval before the rule is saved or scheduled.
+
+This process ensures that:
+
+- The rule logic is clearly defined and checked for errors  
+- No free-form code is run  
+- You can see exactly what will be evaluated before you approve the rule
+
+== Before you begin
+
+Before you can create and run custom rules, ensure you have the following:
+
+AWS credentials:: Read-only access to your AWS environment. Custom rules require read-only permissions as a security boundary.
+ONTAP credentials:: FSx admin viewer user with read-only permissions. Workload Factory creates this user automatically with the required permissions.
+Link and Connector:: Required for connectivity to FSx file systems when evaluating rules.
+NetApp Bedrock acknowledgment:: Custom rule creation uses NetApp's Bedrock AI service. You'll be asked to acknowledge this during rule creation.
+
+== Limitations
+
+The following limitations apply to custom rules:
+
+* Automatic fixes are not available. You must correct non-compliant resources yourself using the guidance provided.
+* Each rule can check only one type of resource. To check multiple resource types, create separate rules.
+* The shortest evaluation interval is 1 hour to avoid excessive scanning.
+* Rules have read-only access and cannot make changes to your environment.
+
+== Rule definition model
+
+Each custom rule consists of the following components:
+
+Rule name:: A user-defined name for the rule
+Description:: Your rationale for why this rule matters to your organization
+Resource type:: The FSx resource to evaluate (file system, volume, or cache). Currently, one resource type per rule.
+Scheduler:: How often the rule is evaluated (minimum 1 hour, default 24 hours)
+Severity:: Warning or Critical
+Condition logic:: The specific criteria to check
+Evaluation scope:: Which resources are evaluated (all applicable resources in scope)
+Remediation logic:: Manual guidance for addressing non-compliant resources (automated fixes are not available in the current release)
+
+== Rule lifecycle
+
+Custom rules progress through the following states:
+
+Draft:: Rule is being created or edited. No evaluation occurs.
+Dry-run:: One-time evaluation to preview which resources would be affected. Used for validation before scheduling.
+Scheduled (Enabled):: Rule is active and runs on the defined schedule.
+Disabled:: Rule is paused but not deleted. Can be re-enabled.
+Deleted:: Rule is permanently removed.
+
+== Custom rule examples
+
+The following examples illustrate common custom rules:
+
+*Production volume protection*:: "All volumes with tag 'Prod' must have a snapshot policy installed"
++
+This rule automatically creates snapshots to protect production volumes according to company requirements.
+
+*Archive volume tiering*:: "All volumes with tag 'Archive' should have a tiering policy set to 'All'"
++
+This rule lowers costs by automatically moving archived data to cheaper storage.
+
+*File system naming standards*:: "All file systems must follow the naming convention 'fsx-{environment}-{application}'"
++
+This rule validates that file systems adhere to organizational naming conventions for easier management and cost allocation.
+
+== What to do next
+
+link:create-custom-rule.html[Create a custom rule]

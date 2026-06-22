@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: whats-new.html
+keywords: what's new, features, new, release notes, enhancements, fixes
+summary: "Learn what's new with the Well-architected component of Workload Factory."
+---
+
+= What's new with NetApp Workload Factory for Well-architected
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Learn what's new with the Well-architected component of Workload Factory.
+
+//tag::whats-new[]
+//tag::whats-new[]
+== 06 July 2026
+
+include::_whatsnew/2026-07-06.adoc[]

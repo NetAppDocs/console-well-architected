@@ -1,0 +1,152 @@
+---
+sidebar: sidebar
+permalink: create-custom-rule.html
+keywords: create custom rule, byor, custom rules, fsx, ontap, well architected, rule builder
+summary: Create a custom architectural rule using natural language to enforce your organizational standards for FSx for ONTAP.
+---
+
+= Create a custom rule
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Create custom architecture rules by describing them in plain language. The AI rule builder turns your request into a validated rule that checks your FSx for ONTAP resources.
+
+.Before you begin
+
+* You have configured AWS credentials with read-only access.
+* You have ONTAP credentials with viewer permissions.
+* You have a Link and Connector configured for FSx connectivity.
+* You understand that custom rule creation uses NetApp's Bedrock AI service.
+
+.About this task
+
+The rule creation process walks you through the steps: defining the rule, reviewing how the AI interpreted it, and checking the results before scheduling regular evaluations. You stay in control at every step. The system suggests a rule based on your prompt, but nothing moves forward until you confirm it.
+
+== 1: Access the rule builder
+
+.Steps
+
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon] and then select *Rule builder*.
++
+When you open the rule builder, it shows sample prompts to help you write your custom rule.
+
+== 2: Enter your rule prompt
+
+Describe your rule in natural language. Be as specific as possible about:
+
+* What resource type you're checking (file system, volume, or cache)
+* What condition you're validating
+* What threshold defines compliance
+* Why this rule matters (optional but recommended)
+
+.Prompt examples
+
+The following examples show effective rule prompts:
+
+* "All volumes with tag 'Prod' must have a snapshot policy installed"
+* "File systems in us-east-1 should not exceed 80% capacity"
+* "Volumes tagged 'Archive' should have tiering policy set to 'All' to optimize costs"
+* "All file systems must follow naming convention 'fsx-{env}-{app}'"
+
+.Steps
+
+. In the *Create rule* field, enter your rule description.
+. Click *Generate rule*.
+
+The AI analyzes your prompt and generates a rule definition.
+
+== 3: Review the AI interpretation
+
+The rule builder displays:
+
+* *Parsed interpretation*: How the AI understood your prompt in plain language
+* *Rule definition*: The structured rule including resource type, condition logic, and evaluation criteria
+* *Reasoning*: Why the AI interpreted your prompt this way
+* *Confidence indicator*: How confident the system is in the interpretation
+
+.Steps
+
+. Review the interpretation to make sure it matches what you intended.  
+Check that the rule definition is correct.
+
+If the interpretation is unclear or wrong, the system may ask questions such as:
+* Which resource should be checked?
+* What value or limit defines compliance?
+* How often should the rule run?
+
+. Answer any questions that help clarify and improve the rule.
+
+== 4: Test with a dry-run
+
+Before scheduling the rule, run a one-time check to see which resources it will affect.
+
+.Steps
+
+. Click *Validate rule*.
++
+The system evaluates all resources in scope against your rule logic.
+
+. Review the dry-run results:
+** *Resources evaluated*: Total number of resources checked
+** *Compliant*: Resources that meet the rule criteria
+** *Non-compliant*: Resources that do not meet the criteria
+** *Failed evaluations*: Resources that could not be evaluated (with error details)
+
+. If some resources failed evaluation, review the error reasons:
+** *AWS credential errors*: Read-only permissions may be insufficient for certain resources
+** *Connectivity errors*: Link or Connector might not be configured for specific file systems
+** *ONTAP permission errors*: The viewer user might not have access to certain resources
+
+== 5: Save or schedule the rule
+
+After you test your rule, you can save it as a draft or set it to run regularly.
+
+.Steps
+
+. Do one of the following:
++
+[cols="30,70",options="header"]
+|===
+| To...
+| Do this...
+
+| Schedule regular evaluation
+| Set the evaluation frequency (minimum 1 hour, default 24 hours) and click *Schedule*. The rule is enabled and runs on the defined schedule.
+
+| Save without scheduling
+| Click *Save as draft*. The rule is saved but not evaluated until you schedule it.
+
+| Discard the rule
+| Click *Discard* to cancel rule creation and start over.
+
+|===
+
+.Result
+
+Your custom rule has been created and is listed in the rule catalog. If you set a schedule, it will check your FSx resources at the specified frequency.
+
+== Troubleshooting
+
+No file systems available::
+Set up your AWS credentials and make sure your environment has at least one FSx file system. The rule builder needs a file system to apply rules.
+
+Low confidence interpretation::
+More information is needed. Answer the questions or rewrite your prompt with clear details about the resource type, limits, and conditions.
+
+Partial validation failures::
+Check which resources failed and why. Common causes are missing link or connector settings, or not having enough permissions. Fix the problem, then validate again.
+
+Ambiguous prompt::
+Be more specific about what you want to check. Include the resource type, the condition, and the threshold. See the prompt examples for help.
+
+Rule targets multiple resource types::
+Create a separate rule for each resource type. Only one resource type per rule is supported.
+
+== What to do next
+
+link:manage-custom-rules.html[Manage custom rules]

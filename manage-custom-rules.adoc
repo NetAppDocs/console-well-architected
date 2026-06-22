@@ -1,0 +1,124 @@
+---
+sidebar: sidebar
+permalink: manage-custom-rules.html
+keywords: manage custom rules, edit rules, disable rules, delete rules, rule catalog, byor
+summary: View, edit, enable, disable, and delete custom architectural rules from the Rules catalog.
+---
+
+= Manage custom rules
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The Rules catalog is one place to manage all your custom rules. You can see each rule’s details, change how it works, check its results, and turn it on or off.
+
+== View the Rules catalog
+
+The Rules catalog shows all the rules you created, their status, schedule, and latest results.
+
+.Steps
+
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon] and then select *Rule builder*.
+. Click *View your rules* to open the Rules catalog.
+
+== View rule results
+
+The results show which resources follow your rule and which do not.
+
+.Steps
+
+. In the Rules catalog, click the rule you want to review.
+. Select the *All runs results* tab.
+. Review the results:
+** *Aggregated results*: Summary showing how many resources meet the rules and how many do not.
+** *Per-resource results*: Detailed view of each resource showing whether it passes or fails compliance.
+** *Execution details*: Did the evaluation finish successfully or have errors?
+
+If the check failed for some items, read the error message to see why. Common reasons are connection problems, missing permissions, or a Link/Connector that hasn’t been set up.
+
+== Edit a custom rule
+
+You can change a rule's logic, schedule, or other settings at any time. When you edit a rule, the rule builder opens with the rule's current settings.
+
+.Steps
+
+. In the Rules catalog, click the rule you want to edit.
+. Click *Edit*.
++
+The rule switches to draft mode and the rule builder opens.
+
+. Edit the rule prompt or use the conversation to improve the rule.  
+. Review the AI’s updated interpretation and rule definition. 
++ 
+The system shows what changed from the current rule, including any API calls or logic.  
+. Validate to check the updated rule.
+. Do one of the following:
++
+* To save the changes and schedule the rule, click *Schedule*. The updated rule replaces the original rule and runs on the defined schedule.
+* To save the changes but not schedule the rule, click *Save as draft*. The updated rule replaces the original rule but does not run on the defined schedule.
+* To discard the changes, click *Revert to previous version*. The rule returns to its original definition and leaves edit mode.
+
+== Pause a rule
+
+Pause a rule to pause evaluations without deleting it. Paused rules remain in the catalog and can be resumed at any time.
+
+.Steps
+
+. In the Rules catalog, click the rule you want to pause.
+. Do one of the following:
++
+* To pause a scheduled rule, click *Disable*. The rule stops running on its schedule.
+* To resume a paused rule, click *Resume*. The rule resumes regular evaluations.
+
+== Delete a custom rule
+
+Delete a rule permanently when you no longer need it. This action cannot be undone.
+
+.Steps
+
+. In the rule catalog, click the rule you want to delete.
+. Click *Delete*.
+. Confirm that you want to permanently delete the rule.
+
+.Result
+
+The rule is removed from the catalog. All evaluation history is deleted.
+
+== Run a quick test
+
+Run a quick test at any time to check current compliance without waiting for the next scheduled run.
+
+.Steps
+
+. In the Rules catalog, click the rule you want to evaluate.
+. Click *Validate*.
++
+The system evaluates all resources in scope against the rule logic.
+
+. Review the results to see current compliance status.
+
+Tests are audited and appear in the rule's evaluation history with a "dry-run" indicator.
+
+== Understand execution status
+
+Execution status shows whether a rule ran successfully.
+
+Successful:: All relevant resources were checked and no errors were found.
+
+Partially successful:: Some resources were checked successfully, but others failed. Check the error details for the ones that could not be checked.
+
+Failed:: The evaluation did not finish. Common causes include AWS credential errors, network connection problems, or ONTAP permission issues.
+
+If a rule keeps failing or only partly succeeds, check that:
+
+* AWS credentials have read-only access to all resources
+* Link and Connector are configured for all file systems in scope
+* The ONTAP viewer user has appropriate permissions
+
+== What to do next
+
+link:learn-custom-rules.html[Learn more about custom rules]
