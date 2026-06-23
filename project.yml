@@ -32,7 +32,7 @@ sidebar:
           url: /configuration-analysis-cvo.html
         - title: Improve system configurations
           url: /improve-configurations-cvo.html  
-  - title: Build your own rules (NEW)
+  - title: Build your own rules
     entries:
      - title: Learn about custom rules for FSx for ONTAP
        url: /learn-about-custom-rules.html
