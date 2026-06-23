@@ -38,7 +38,7 @@ link:http://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-
 
 == Related information
 
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected FSx for ONTAP file systems^] 
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations-fsx.html[Implement well-architected FSx for ONTAP file systems^] 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/improve-configurations.html[Implement well-architected Cloud Volumes ONTAP configurations^]
 * link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database workloads using FSx for ONTAP storage^]
 * link:https://docs.netapp.com/us-en/workload-vmware/view-evs-well-architected.html[Implement well-architected EVS configurations using FSx for ONTAP storage^]

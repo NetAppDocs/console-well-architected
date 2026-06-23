@@ -1,5 +1,5 @@
 settings:
-  name: "Product Name"
+  name: "Well-Architected Dashboard for NetApp Console"
   internal:
     pdf_enabled: true
   prod:
