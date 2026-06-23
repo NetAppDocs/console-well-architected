@@ -1,11 +1,8 @@
----
-sidebar: sidebar
 permalink: whats-new.html
-keywords: what's new, features, new, release notes, enhancements, fixes
-summary: "Learn what's new with the Well-architected component of Workload Factory."
+keywords: what's new, features, new, release notes, enhancements, fixes, new features, well-architected, well-architected dashboard, amazon fsx for netapp ontap, fsx for ontap, cloud volumes ontap
+summary: "Learn what's new with the well-architected dashboard in NetApp Console."
 ---
-
-= What's new with NetApp Workload Factory for Well-architected
+= What's new with the Well-Architected dashboard in NetApp Console
 :icons: font
 :imagesdir: ./media/
 
@@ -13,7 +10,8 @@ summary: "Learn what's new with the Well-architected component of Workload Facto
 Learn what's new with the Well-architected component of Workload Factory.
 
 //tag::whats-new[]
-//tag::whats-new[]
+Learn what's new with the Well-Architected dashboard in NetApp Console.
+
 == 06 July 2026
 
 include::_whatsnew/2026-07-06.adoc[]

@@ -1,0 +1,8 @@
+=== Introducing the well-architected dashboard in NetApp Console
+
+The well-architected dashboard in NetApp Console provides a single view of the well-architected status of your system configurations. The dashboard provides insights and recommendations to help you achieve operational excellence. You can view the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by NetApp Console, while others require manual intervention. In this case, NetApp Console provides detailed instructions to help you implement the recommended changes.
+
+The well-architected dashboard in NetApp Console is available for the following storage systems:
+
+* Amazon FSx for NetApp ONTAP
+* Cloud Volumes ONTAP in Microsoft Azure

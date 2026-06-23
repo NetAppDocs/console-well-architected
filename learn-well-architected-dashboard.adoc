@@ -1,0 +1,44 @@
+---
+sidebar: sidebar
+permalink: learn-well-architected-dashboard.html
+keywords: well-architected, best practices, well-architected system, best practices, well-architected framework, well-architected configurations, system management, system optimization, system configuration, system analysis
+summary: "NetApp Console scans system configurations for reliability, security, operational excellence, cost optimization, and performance efficiency, providing insights and recommendations to help you achieve operational excellence." 
+---
+= Learn about the well-architected dashboard in NetApp Console
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+NetApp Console helps you maintain and operate reliable, secure, efficient, and cost-effective configurations that align with the well-architected frameworks for the storage type you use. NetApp Console provides daily analysis of your system configurations, recommendations, and automatic fixes to promote healthy operations. By automating this process, NetApp Console minimizes human error and ensures consistency in storage management.
+
+== How it works 
+
+NetApp Console analyzes your configurations daily. The analysis provides well-architected status, insights, and recommendations. 
+
+After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the Well-architected dashboard for the deployment. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by NetApp Console, while others require manual intervention. In this case, NetApp Console provides detailed instructions to help you implement the recommended changes.
+
+You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. When you dismiss a specific configuration analysis, NetApp Console does not include the configuration in the total optimization score.
+
+== Why it matters
+
+NetApp Console applies best practices to large storage, database, and VMware environments by combining ongoing assessment with recommendation insights and remediation. Automated fixes applied in the NetApp Console reduce human error, ensure uniform management, and preserve performance and reliability across your system infrastructures.
+
+== Supported storage systems
+
+The following storage systems are supported in the Well-architected dashboard in the Console:
+
+* Amazon FSx for NetApp ONTAP
+* Cloud Volumes ONTAP in Microsoft Azure
+
+== Get started with NetApp Console to detect and fix system misconfigurations 
+
+To get started with NetApp Console, sign up, add credentials, and establish connectivity to manage your resources and optimize system configurations.
+
+link:http://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html[Get started workflow for NetApp Console (SaaS application)^]
+
+== Related information
+
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations-fsx.html[Implement well-architected FSx for ONTAP file systems^] 
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/improve-configurations.html[Implement well-architected Cloud Volumes ONTAP configurations^]
+* link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database workloads using FSx for ONTAP storage^]
+* link:https://docs.netapp.com/us-en/workload-vmware/view-evs-well-architected.html[Implement well-architected EVS configurations using FSx for ONTAP storage^]

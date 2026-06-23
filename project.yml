@@ -1,12 +1,44 @@
 settings:
-  name: "Product Name"
+  name: "Well-Architected systems in NetApp Console"
   internal:
     pdf_enabled: true
+    termcheck_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
+  rss_page: "whats-new.html"  
+  release_notes_autogen:
+    release_notes_repo: console-relnotes    
 
 sidebar: 
   entries:
+  - title: Get started
+    entries:
+    - title: What's new
+      url: /whats-new.html
+    - title: Learn about the well-architected dashboard
+      url: /learn-about-well-architected-dashboard.html
+  - title: Supported products
+    entries:
+    - title: Amazon FSx for NetApp ONTAP
+      entries: 
+        - title: Configuration analysis
+          url: /configuration-analysis-fsx.html
+        - title: Improve file system configurations
+          url: /improve-configurations-fsx.html
+    - title: Cloud Volumes ONTAP
+      entries:
+        - title: Configuration analysis
+          url: /configuration-analysis-cvo.html
+        - title: Improve system configurations
+          url: /improve-configurations-cvo.html  
+  - title: Build your own rules (NEW)
+    entries:
+     - title: Learn about custom rules for FSx for ONTAP
+       url: /learn-about-custom-rules.html
+     - title: Create a custom rule
+       url: /create-custom-rule.html
+     - title: Manage custom rules
+       url: /manage-custom-rules.html
   - title: Legal notices
     url: /legal-notices.html

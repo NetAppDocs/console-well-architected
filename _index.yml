@@ -1,14 +1,32 @@
 indexpage:
-  title: # Unquoted string 
-  lead: # Quoted string
-  summary: # Quoted string 
-  keywords: # Unquoted comma-delimited list of keywords 
+  title: Well-architected systems in NetApp Console
+  lead: NetApp Console helps you maintain and operate reliable, secure, efficient, and cost-effective configurations that align with the well-architected frameworks for the storage type you use. 
+  summary: NetApp Console helps you maintain and operate reliable, secure, efficient, and cost-effective configurations that align with the well-architected frameworks for the storage type you use. 
+  keywords: amazon, fsx, cloud volumes ontap, microsoft azure, netapp, ontap, well-architected framework, NetApp Console
   tiles: 
-    # Tile definition 
-    - title: # Quoted or unquoted string
-      links: 
-        # Link definition
-        - title: # Quoted or unquoted string
-          url: # Path to target
-        # Next link on this tile (title/url pair)
-    # Next tile on this page (title/links)
+    - title: Get started
+      links:
+        - title: Release notes
+          url: /whats-new.html
+        - title: Learn about the well-architected dashboard
+          url: /learn-well-architected-dashboard.html
+    - title: Supported products
+      links:
+        - title: Amazon FSx for NetApp ONTAP
+          url: /configuration-analysis-fsx.html
+        - title: Cloud Volumes ONTAP  
+          url: /configuration-analysis-cvo.html
+    - title: Knowledge and support
+      links:
+        - title: Register for support
+          url: /register-support.html
+        - title: Get help
+          url: /get-help.html
+    - title: Blogs & community
+      links:
+        - title: NetApp Console
+          url: https://www.netapp.com/console
+        - title: NetApp Data Services
+          url: https://www.netapp.com/data-services/
+        - title: NetApp Community
+          url: https://community.netapp.com/
