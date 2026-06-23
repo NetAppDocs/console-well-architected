@@ -1,5 +1,5 @@
 settings:
-  name: "Well-Architected systems in NetApp Console"
+  name: "Well-architected systems"
   internal:
     pdf_enabled: true
     termcheck_enabled: true
