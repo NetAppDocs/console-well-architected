@@ -1,10 +1,14 @@
 settings:
-  name: "Well-Architected Dashboard for NetApp Console"
+  name: "Well-Architected systems in NetApp Console"
   internal:
     pdf_enabled: true
+    termcheck_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
+  rss_page: "whats-new.html"  
+  release_notes_autogen:
+    release_notes_repo: console-relnotes    
 
 sidebar: 
   entries:
