@@ -22,17 +22,18 @@ After the daily analysis completes, the dashboard displays the total number of w
 
 == Before you begin
 
-* Optional. link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html[Deploy a Console agent] for the most comprehensive analysis of your system resources.
-* 
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html[Deploy a Console agent] for the most comprehensive analysis of your system resources.
 
 == View recommendations for configuration issues
-You can view recommendations for configuration issues after the daily analysis completes. The recommendations explain best practices and potential pitfalls of unoptimized configurations. You can also view the well-architected status for your systems.
+You can view recommendations for configuration issues after the daily analysis completes. The recommendations explain best practices and potential pitfalls of unoptimized configurations. You can also download a CSV file of the recommendations for your configurations.
 
 .Steps
 . Log in to the link:https://console.netapp.com/home[NetApp Console^].
 . From the NetApp Console menu, select *Workloads* and then *Well-architected*.
-. From the Well-architected dashboard, select *View* for any configuration. 
-. Review the recommendation. 
+. From the Well-architected dashboard, select *View* for any configuration.
++
+Optionally, select image:button_download.png["A screenshot of the download icon"]to download a CSV file of the recommendations for all configurations.
+. Review the recommendation.
 
 .What's next
 

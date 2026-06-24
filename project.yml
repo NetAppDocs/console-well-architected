@@ -17,7 +17,7 @@ sidebar:
     - title: What's new
       url: /whats-new.html
     - title: Learn about the well-architected dashboard
-      url: /learn-about-well-architected-dashboard.html
+      url: /learn-well-architected-dashboard.html
   - title: Supported products
     entries:
     - title: Amazon FSx for NetApp ONTAP
