@@ -4,7 +4,7 @@ permalink: improve-configurations-cvo.html
 keywords: improve configurations, optimize configurations, implement best practices, well-architected file system, Cloud Volumes ONTAP, Microsoft Azure
 summary: "Workload factory scans Cloud Volumes ONTAP configurations providing insights and recommendations to help you achieve operational excellence." 
 ---
-= Implement well-architected file system configurations
+= Implement well-architected Cloud Volumes ONTAP system configurations
 :icons: font
 :imagesdir: ./media/
 
