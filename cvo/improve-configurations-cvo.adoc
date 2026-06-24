@@ -1,0 +1,115 @@
+---
+sidebar: sidebar
+permalink: improve-configurations-cvo.html
+keywords: improve configurations, optimize configurations, implement best practices, well-architected file system, Cloud Volumes ONTAP, Microsoft Azure
+summary: "Workload factory scans Cloud Volumes ONTAP configurations providing insights and recommendations to help you achieve operational excellence." 
+---
+= Implement well-architected file system configurations
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_include/improve-configurations-fsx.adoc[]
+
+== Before you begin
+
+* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account. 
+* The remediation process may cause instance downtimes or service interruptions. Make sure you review each recommendation carefully before selecting to fix a configuration issue. 
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link] for the most comprehensive analysis of your file system resources.
+
+== Fix a configuration issue
+You can fix configuration issues for an FSx for ONTAP file system or for selected volumes in a file system. You can select one or more configurations to fix.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *Well-architected*.  
+. Select *View issues* for any configuration. Make sure you review the recommendation carefully. 
++ 
+The recommendation explains best practices and potential pitfalls of unoptimized configurations.
+. Select to *Fix*.
++
+When *View and fix* is an option, select the impacted volumes to fix. 
+. Review the summary and action items that appear in the dialog to learn what will happen if you choose to fix the issue. Some operations may cause instance downtimes or service interruptions. 
+. Select *Continue* to fix the configuration issue. 
+
+.Result
+The process to fix the issue initiates. Select the account settings menu and then select *Tracker* to view the status of the operation.
+
+== Dismiss a configuration analysis
+Dismiss to stop a configuration analysis indefinitely for an FSx for ONTAP file system or for selected volumes in a file system. You can restart the analysis when needed.
+
+[role="tabbed-block"]
+====
+
+.Dismiss a configuration analysis for a file system
+--
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *Well-architected*.  
+. Select *View issues* for any configuration. Make sure you review the recommendation carefully. 
++ 
+The recommendation explains best practices and potential pitfalls of unoptimized configurations.
+. Under Configurations, identify the configuration that doesn't apply to your environment and then select *Dismiss*.  
+. In the Dismiss configuration dialog, select *Dismiss* to stop the analysis for the configuration.
+--
+
+.Dismiss a configuration analysis for a volume
+--
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *Well-architected*.   
+. Under Configurations, identify the configuration to dismiss for selected volumes and then select *View and fix*. 
+. Identify the volume(s) to dismiss from the configuration analysis. 
++
+* For one volume: select the actions menu and then select *Dismiss volume*.
+* For multiple volumes: select the volumes and then select *Dismiss* next to Bulk action.
+. Select *Dismiss* to stop the analysis for the configuration.
+. In the Dismiss volumes dialog, select *Dismiss* to confirm.
+--
+====
+
+.Result
+The configuration analysis stops for the file system or selected volumes. 
+
+You can reactivate the analysis at any time. The configuration is no longer included in the total optimization score.
+
+== Reactivate a dismissed configuration analysis
+
+Reactivate a dismissed configuration analysis at any time. You can select one or more configurations to reactivate.
+
+[role="tabbed-block"]
+====
+
+.Reactivate a configuration analysis for a file system
+--
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *Well-architected*.   
+. Select *Dismissed configurations*. 
+. Identify the configuration you want to reactivate and select *Reactivate*.  
+
+--
+.Reactivate a configuration analysis for a volume
+--
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *Well-architected*.
+. Select *Dismissed configurations*. 
+. Identify the volume(s) to reactivate from the configuration analysis. 
+
+* For one volume: select the actions menu and then select *Reactivate volume*.
+* For multiple volumes: select the volumes and then select *Reactivate* next to Bulk action.
+
+--
+====
+
+.Result
+The configuration analysis is reactivated. A new analysis occurs daily moving forward.

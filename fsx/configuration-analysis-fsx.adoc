@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: configuration-analysis.html
+permalink: configuration-analysis-fsx.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
 summary: "NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues."  
 ---
