@@ -19,9 +19,9 @@ Key capabilities include:
 * Insights to action
 
 == Analysis requirements
-For a complete file system analysis, you must do the following: 
+For a complete Cloud Volumes ONTAP system analysis, you must do the following: 
 
-* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[Deploy a NetApp Console agent^] or link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link^]. Console agent and link connectivity let NetApp Console analyze all file system configurations like data protection and performance.
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[Deploy a NetApp Console agent^]. Console agent connectivity lets the Console analyze all Cloud Volumes ONTAP system configurations like data protection and performance.
 
 * Grant _view, planning, and analysis_ permissions in your AWS account. 
 +
