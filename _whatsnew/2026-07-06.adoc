@@ -1,6 +1,6 @@
 === Introducing the Well-architected dashboard in NetApp Console
 
-The Well-architected dashboard in NetApp Console provides a single view of the well-architected status of your system configurations. The dashboard provides insights and recommendations to help you achieve operational excellence. You can view the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by Console, while others require manual intervention. In this case, Console provides detailed instructions to help you implement the recommended changes.
+The Well-architected dashboard in NetApp Console provides a single view of the well-architected status of your system configurations across accounts and regions. The dashboard provides insights and recommendations to help you achieve operational excellence. You can view the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by Console, while others require manual intervention. In this case, Console provides detailed instructions to help you implement the recommended changes.
 
 Learn more about the link:https://docs.netapp.com/us-en/console-well-architected/learn-well-architected-dashboard.html[Well-architected dashboard].
 
