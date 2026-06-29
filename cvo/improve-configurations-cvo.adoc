@@ -22,7 +22,8 @@ After the daily analysis completes, the dashboard displays the total number of w
 
 == Before you begin
 
-* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html[Deploy a Console agent] for the most comprehensive analysis of your system resources.
+* You must link:https://console.netapp.com/add-working-environment/choose-type[add a Cloud Volumes ONTAP system] to NetApp Console to view the well-architected status and recommendations for configuration issues.
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html[You should deploy a Console agent] for the most comprehensive analysis of your system resources.
 
 == View recommendations for configuration issues
 You can view recommendations for configuration issues after the daily analysis completes. The recommendations explain best practices and potential pitfalls of unoptimized configurations. You can also download a CSV file of the recommendations for your configurations.
