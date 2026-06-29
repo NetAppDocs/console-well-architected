@@ -1,12 +1,12 @@
 ---
 sidebar: sidebar
-permalink: configuration-analysis-cvo.html
+permalink: cvo/configuration-analysis-cvo.html
 keywords: Cloud Volumes ONTAP, configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
 summary: "NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues."  
 ---
 = Configuration analysis for Cloud Volumes ONTAP
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues. When issues are found, the Console shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 

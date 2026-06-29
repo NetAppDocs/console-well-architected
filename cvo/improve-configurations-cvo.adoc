@@ -1,12 +1,12 @@
 ---
 sidebar: sidebar
-permalink: improve-configurations-cvo.html
+permalink: cvo/improve-configurations-cvo.html
 keywords: improve configurations, optimize configurations, implement best practices, well-architected file system, Cloud Volumes ONTAP, Microsoft Azure
 summary: "Workload factory scans Cloud Volumes ONTAP configurations providing insights and recommendations to help you achieve operational excellence." 
 ---
 = Implement well-architected Cloud Volumes ONTAP system configurations
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 Using configuration analysis insights and recommendations, leverage NetApp to implement best practices for your Cloud Volumes ONTAP systems running on Microsoft Azure storage. You can easily review the well-architected status, learn about issues with your configurations, and get recommendations to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.

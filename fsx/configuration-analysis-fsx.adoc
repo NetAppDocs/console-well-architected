@@ -1,12 +1,12 @@
 ---
 sidebar: sidebar
-permalink: configuration-analysis-fsx.html
+permalink: fsx/configuration-analysis-fsx.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
 summary: "NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues."  
 ---
 = Configuration analysis for Amazon FSx for NetApp ONTAP
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues. When issues are found, NetApp Console shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
