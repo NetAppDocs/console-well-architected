@@ -9,13 +9,13 @@ summary: "NetApp Console scans system configurations for reliability, security, 
 :imagesdir: ./media/
 
 [.lead]
-NetApp Console helps you maintain and operate reliable, secure, efficient, and cost-effective configurations that align with the well-architected frameworks for the storage type you use. NetApp Console provides daily analysis of your system configurations, recommendations, and automatic fixes to promote healthy operations. By automating this process, NetApp Console minimizes human error and ensures consistency in storage management.
+NetApp Console helps you maintain and operate reliable, secure, efficient, and cost-effective configurations that align with the well-architected frameworks for the storage type you use. The well-architected dashboard provides a unified view across accounts and regions, helps teams identify and prioritize risks, and supports custom rules for specific requirements. Automatic daily scans of your storage system configurations provide insights and recommendations to help you optimize your storage environments.
 
 == How it works 
 
 NetApp Console analyzes your configurations daily. The analysis provides well-architected status, insights, and recommendations. 
 
-After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the Well-architected dashboard for the deployment. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by NetApp Console, while others require manual intervention. In this case, NetApp Console provides detailed instructions to help you implement the recommended changes.
+After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the well-architected dashboard for the deployment. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by NetApp Console, while others require manual intervention. In this case, NetApp Console provides detailed instructions to help you implement the recommended changes.
 
 You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. When you dismiss a specific configuration analysis, NetApp Console does not include the configuration in the total optimization score.
 
@@ -25,7 +25,7 @@ NetApp Console applies best practices to large storage, database, and VMware env
 
 == Supported storage systems
 
-The following storage systems are supported in the Well-architected dashboard in the Console:
+The following storage systems are supported in the well-architected dashboard in the Console:
 
 * Amazon FSx for NetApp ONTAP
 * Cloud Volumes ONTAP in Microsoft Azure

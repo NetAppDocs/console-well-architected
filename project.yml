@@ -1,5 +1,5 @@
 settings:
-  name: "Well-architected systems"
+  name: "Well-architected dashboard"
   internal:
     pdf_enabled: true
     termcheck_enabled: true
@@ -42,3 +42,7 @@ sidebar:
        url: /manage-custom-rules.html
   - title: Legal notices
     url: /legal-notices.html
+
+product-family:
+  name: NetApp Console
+  repo: console-family
