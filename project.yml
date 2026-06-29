@@ -23,15 +23,15 @@ sidebar:
     - title: Amazon FSx for NetApp ONTAP
       entries: 
         - title: Configuration analysis
-          url: /configuration-analysis-fsx.html
+          url: /fsx/configuration-analysis-fsx.html
         - title: Improve file system configurations
-          url: /improve-configurations-fsx.html
+          url: /fsx/improve-configurations-fsx.html
     - title: Cloud Volumes ONTAP
       entries:
         - title: Configuration analysis
-          url: /configuration-analysis-cvo.html
+          url: /cvo/configuration-analysis-cvo.html
         - title: Improve system configurations
-          url: /improve-configurations-cvo.html  
+          url: /cvo/improve-configurations-cvo.html  
   - title: Build your own rules
     entries:
      - title: Learn about custom rules for FSx for ONTAP
