@@ -29,7 +29,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Lea
 
 == Best practices and recommendations for storage workloads
 
-Workload Factory assesses storage configurations to provide an in-depth view of ONTAP configuration best practices and for compliance with the AWS Well-Architected Framework. The assessment also recommends improvements and fixes.  
+Workload Factory assesses storage configurations against ONTAP best practices and the AWS Well-Architected Framework. The assessment also recommends improvements and fixes.  
 
 The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, _security_, _operational excellence_, _cost optimization_, and _performance efficiency_.
 
@@ -54,7 +54,7 @@ To extend data reliability, data can be replicated to an FSx for ONTAP file syst
 
 * *Increase SSD capacity threshold*
 +
-The SSD storage tier capacity should not exceed 80% utilization on an ongoing basis. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your file system. Running out of capacity might result in data volumes becoming read-only, and services trying to write new data might fail. 
+The SSD storage tier capacity should not exceed 80% utilization. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your file system. Running out of capacity causes data volumes to become read-only. Services trying to write new data also fail.
 
 * *Match labels to ensure data reliability*
 +
@@ -62,7 +62,7 @@ The snapshot policy labels of the source volume and the replication policy label
 
 * *Increase file capacity threshold* 
 +
-The file capacity threshold should be raised to avoid hitting the volume capacity limit. Low file capacity (inodes) prevents writing additional data to the volume. Workload Factory recommends staying below 80% utilization of the available file capacity on an ongoing basis. Available file capacity is required to create new files in the volume. 
+The file capacity threshold should be raised to avoid hitting the volume capacity limit. Low file capacity (inodes) prevents writing additional data to the volume. Workload Factory recommends maintaining file capacity utilization below 80%. Available file capacity is required to create new files in the volume. 
 
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
@@ -73,7 +73,7 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) helps protect your volu
 
 * *Unauthorized access to volumes*
 +
-Volumes serving application data using iSCSI should not allow NAS access in parallel. Workload Factory recommends that volumes accessed via the iSCSI protocol should be restricted to any additional protocols.
+Volumes serving application data using iSCSI should not allow NAS access at the same time. Workload Factory recommends restricting iSCSI volumes from using any other protocol.
 
 === Operational excellence
 Operational excellence focuses on delivering the most optimal architecture and business value. 
@@ -107,11 +107,11 @@ Cost optimization helps you get the most value for your business while keeping c
 
 * *Optimize TCO by tiering cold data* 
 +
-Cold data tiering should be enabled to reduce SSD storage tier utilization. Applying a tiering policy to every volume is recommended. FSx for ONTAP scans the data continuously to detect cold data and move it to the capacity storage pool tier without disruption. 
+Enable cold data tiering to reduce SSD storage tier utilization. Workload Factory recommends applying a tiering policy to every volume. FSx for ONTAP scans the data continuously to detect cold data and move it to the capacity storage pool tier without disruption. 
 
 * *Enable storage efficiencies* 
 +
-Storage efficiencies should be enabled - compaction, compression, and deduplication - to optimize storage utilization and reduce the SSD tier cost. 
+Enable storage efficiencies — compaction, compression, and deduplication — to optimize storage utilization and reduce the SSD tier cost.
 
 * *Unnecessary snapshot and backup deletion*
 +
@@ -123,7 +123,7 @@ After a block device isn't used for seven days, Workload Factory recommends arch
 
 * *Underutilized SSD capacity*
 +
-An underutilized SSD capacity tier may be incurring unnecessary costs. Workload Factory recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and other file system operations are not supported during this time.
+An underutilized SSD capacity tier incurs unnecessary costs. Workload Factory recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and the system doesn't support other file system operations during this time.
 
 * *Inactive NAS volumes*
 +

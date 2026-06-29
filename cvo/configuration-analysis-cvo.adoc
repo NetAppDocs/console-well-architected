@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: cvo/configuration-analysis-cvo.html
 keywords: Cloud Volumes ONTAP, configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
-summary: "NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues."  
+summary: "NetApp Console analyzes storage system configurations daily to determine if any there are any configuration issues."  
 ---
 = Configuration analysis for Cloud Volumes ONTAP
 :icons: font
@@ -42,7 +42,8 @@ Schedule local snapshots for efficient backup and quick restores. Snapshots are 
 
 * *SSD capacity threshold*
 +
-The SSD storage tier capacity should not exceed 80% utilization on an ongoing basis. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your file system. Running out of capacity might result in data volumes becoming read-only, and services trying to write new data might fail. 
+The SSD storage tier capacity should not exceed 80% utilization on an ongoing basis. Exceeding this threshold can degrade throughput and cause data volumes to become read-only, causing write operations to fail.
+
 
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
@@ -52,7 +53,7 @@ Security emphasizes protecting data, systems, and assets through risk assessment
 NetApp Autonomous Ransomware Protection with AI (ARP/AI) helps enhance cyber resiliency and protect your volumes from ransomware threats. We recommend enabling ARP/AI for all volumes.
 
 === Operational excellence
-Operational excellence focuses on delivering the most optimal architecture and business value. 
+Operational excellence focuses on delivering the best architecture and business value. 
 
 * *Volume capacity utilization threshold*
 +
@@ -75,11 +76,11 @@ Cost optimization helps you get the most value for your business while keeping c
 
 * *Identify underutilized SSD capacity*
 +
-An underutilized SSD capacity tier might be incurring unnecessary costs. NetApp recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and other file system operations are not supported during this time.
+An underutilized SSD capacity tier might be incurring unnecessary costs. NetApp recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and the system does not support other file system operations during this time.
 
 * *Data tiering policy*
 +
-We recommend turning on cold data tiering to move inactive data from from the SSD storage tier to lower-cost storage and reduce costs. Azure Blob Storage is used as the capacity tier for inactive data.
+Enable cold data tiering to move cold data from the SSD storage tier to lower-cost storage. Azure Blob Storage serves as the capacity tier for inactive data.
 
 .What's next
 

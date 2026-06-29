@@ -26,7 +26,7 @@ After the daily analysis completes, the dashboard displays the total number of w
 * link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html[You should deploy a Console agent] for the most comprehensive analysis of your system resources.
 
 == View recommendations for configuration issues
-You can view recommendations for configuration issues after the daily analysis completes. The recommendations explain best practices and potential pitfalls of unoptimized configurations. You can also download a CSV file of the recommendations for your configurations.
+You can view recommendations for configuration issues after the daily analysis completes. Recommendations explain best practices and potential risks of unoptimized configurations. You can also download a CSV file of the recommendations.
 
 .Steps
 . Log in to the link:https://console.netapp.com/home[NetApp Console^].
@@ -38,4 +38,4 @@ Optionally, select image:button_download.png["A screenshot of the download icon"
 
 .What's next
 
-We recommend taking action to fix configuration issues to keep your systems performing optimally. 
+Fix configuration issues to keep your systems running at optimal performance.
