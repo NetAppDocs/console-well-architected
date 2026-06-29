@@ -83,4 +83,4 @@ We recommend turning on cold data tiering to move inactive data from from the SS
 
 .What's next
 
-link:improve-configurations-fsx.html[Implement well-architected FSx for ONTAP file system configurations]
+link:cvo/improve-configurations-cvo.html[Implement well-architected Cloud Volumes ONTAP system configurations]

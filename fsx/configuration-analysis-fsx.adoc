@@ -132,4 +132,4 @@ The configuration analysis identifies NAS volumes that are not actively used and
 
 .What's next
 
-link:improve-configurations-fsx.html[Implement well-architected FSx for ONTAP file system configurations]
+link:fsx/improve-configurations-fsx.html[Implement well-architected FSx for ONTAP file system configurations]
