@@ -19,7 +19,7 @@ sidebar:
     - title: Learn about the well-architected dashboard
       url: /learn-about-well-architected-dashboard.html
     - title: Learn about custom rules for FSx for ONTAP
-      url: /learn-about-custom-rules.html
+      url: /learn-custom-rules.html
   - title: Supported products
     entries:
     - title: Amazon FSx for NetApp ONTAP
