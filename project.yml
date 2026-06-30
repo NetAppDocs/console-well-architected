@@ -37,7 +37,7 @@ sidebar:
   - title: Build your own rules
     entries:
      - title: Learn about custom rules for FSx for ONTAP
-       url: /learn-about-custom-rules.html
+       url: /learn-custom-rules.html
      - title: Create a custom rule
        url: /create-custom-rule.html
      - title: Manage custom rules
