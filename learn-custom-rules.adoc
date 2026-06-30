@@ -21,7 +21,7 @@ The Rule builder lets you create custom best-practice rules using plain language
 
 Your custom rules are treated the same as built-in NetApp rules. They run on the same engine, on the same schedule, and appear in the same views and workflows.
 
-Custom rules help you enforce your organization's standards, risk limits, and operational requirements—things that generic vendor rules may not fully cover.
+Custom rules help you enforce your organization's standards, risk limits, and operational requirements—things that generic vendor rules might not fully cover.
 
 == How custom rules work
 
@@ -37,9 +37,9 @@ This process ensures that:
 
 Before you can create and run custom rules, ensure you have the following:
 
-AWS credentials:: Read-only access to your AWS environment. Custom rules require read-only permissions as a security boundary.
+AWS credentials:: Read-only access to your AWS environment. Custom rules require read-only permissions as a security boundary. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Add AWS credentials to Workload Factory^].
 ONTAP credentials:: FSx admin viewer user with read-only permissions. Workload Factory creates this user automatically with the required permissions.
-Link and Connector:: Required for connectivity to FSx file systems when evaluating rules.
+Link and connector:: Required for connectivity to FSx file systems when evaluating rules. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system with a link^].
 NetApp Bedrock acknowledgment:: Custom rule creation uses NetApp's Bedrock AI service. You'll be asked to acknowledge this during rule creation.
 
 == Limitations
@@ -55,14 +55,14 @@ The following limitations apply to custom rules:
 
 Each custom rule consists of the following components:
 
-Rule name:: A user-defined name for the rule
-Description:: Your rationale for why this rule matters to your organization
+Rule name:: A user-defined name for the rule.
+Description:: Your rationale for why this rule matters to your organization.
 Resource type:: The FSx resource to evaluate (file system, volume, or cache). Currently, one resource type per rule.
-Scheduler:: How often the rule is evaluated (minimum 1 hour, default 24 hours)
-Severity:: Warning or Critical
-Condition logic:: The specific criteria to check
-Evaluation scope:: Which resources are evaluated (all applicable resources in scope)
-Remediation logic:: Manual guidance for addressing non-compliant resources (automated fixes are not available in the current release)
+Scheduler:: How often the rule is evaluated (minimum 1 hour, default 24 hours).
+Severity:: Warning or Critical.
+Condition logic:: The specific criteria to check.
+Evaluation scope:: Which resources are evaluated (all applicable resources in scope).
+Remediation logic:: Manual guidance for addressing non-compliant resources.
 
 == Rule lifecycle
 

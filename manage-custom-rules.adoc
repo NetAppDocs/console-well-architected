@@ -33,12 +33,9 @@ The results show which resources follow your rule and which do not.
 
 . In the Rules catalog, click the rule you want to review.
 . Select the *All runs results* tab.
-. Review the results:
-** *Aggregated results*: Summary showing how many resources meet the rules and how many do not.
-** *Per-resource results*: Detailed view of each resource showing whether it passes or fails compliance.
-** *Execution details*: Did the evaluation finish successfully or have errors?
+. Select **View details** to see the results for each run.
 
-If the check failed for some items, read the error message to see why. Common reasons are connection problems, missing permissions, or a Link/Connector that hasn’t been set up.
+If the check failed for some items, read the error message to see why. Common reasons are connection problems, missing permissions, or a Link/Connector that hasn't been set up.
 
 == Edit a custom rule
 
@@ -52,27 +49,26 @@ You can change a rule's logic, schedule, or other settings at any time. When you
 The rule switches to draft mode and the rule builder opens.
 
 . Edit the rule prompt or use the conversation to improve the rule.  
-. Review the AI’s updated interpretation and rule definition. 
+. Review the AI's updated interpretation and rule definition. 
 + 
 The system shows what changed from the current rule, including any API calls or logic.  
-. Validate to check the updated rule.
-. Do one of the following:
+. Do one of the following depending on the changes made:
 +
-* To save the changes and schedule the rule, click *Schedule*. The updated rule replaces the original rule and runs on the defined schedule.
-* To save the changes but not schedule the rule, click *Save as draft*. The updated rule replaces the original rule but does not run on the defined schedule.
+* If minor changes were made, click *Save* to update the rule.
+* If significant changes were made, click *Validate rule* to test the changes, then click *Schedule* to save and schedule the rule, or click *Save as draft* to save without scheduling.
 * To discard the changes, click *Revert to previous version*. The rule returns to its original definition and leaves edit mode.
 
 == Pause a rule
 
-Pause a rule to pause evaluations without deleting it. Paused rules remain in the catalog and can be resumed at any time.
+Pause a rule to stop evaluations without deleting the rule. Paused rules stay in the catalog and can be restarted at any time.
 
 .Steps
 
 . In the Rules catalog, click the rule you want to pause.
 . Do one of the following:
 +
-* To pause a scheduled rule, click *Disable*. The rule stops running on its schedule.
-* To resume a paused rule, click *Resume*. The rule resumes regular evaluations.
+* To pause a scheduled rule, click *Pause*, then confirm. The rule stops running on its schedule.
+* To resume a paused rule, click *Resume*, then confirm. The rule resumes regular evaluations.
 
 == Delete a custom rule
 
@@ -101,7 +97,7 @@ The system evaluates all resources in scope against the rule logic.
 
 . Review the results to see current compliance status.
 
-Tests are audited and appear in the rule's evaluation history with a "dry-run" indicator.
+Tests are audited and appear in the rule's evaluation history.
 
 == Understand execution status
 
@@ -115,9 +111,9 @@ Failed:: The evaluation did not finish. Common causes include AWS credential err
 
 If a rule keeps failing or only partly succeeds, check that:
 
-* AWS credentials have read-only access to all resources
-* Link and Connector are configured for all file systems in scope
-* The ONTAP viewer user has appropriate permissions
+* AWS credentials have read-only access to all resources.
+* Link and connector are configured for all file systems in scope.
+* The FSx for ONTAP viewer user has appropriate permissions.
 
 == What to do next
 
