@@ -16,6 +16,14 @@ indexpage:
           url: /fsx/configuration-analysis-fsx.html
         - title: Cloud Volumes ONTAP  
           url: /cvo/configuration-analysis-cvo.html
+    - title: Build your own rules
+      links:
+        - title: Learn about custom rules
+          url: /learn-custom-rules.html
+        - title: Create a custom rule
+          url: /create-custom-rule.html
+        - title: Manage custom rules
+          url: /manage-custom-rules.html
     - title: Knowledge and support
       links:
         - title: Register for support

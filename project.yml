@@ -18,6 +18,8 @@ sidebar:
       url: /whats-new.html
     - title: Learn about the well-architected dashboard
       url: /learn-well-architected-dashboard.html
+    - title: Learn about custom rules for FSx for ONTAP
+      url: /learn-custom-rules.html
   - title: Supported products
     entries:
     - title: Amazon FSx for NetApp ONTAP
@@ -34,8 +36,8 @@ sidebar:
           url: /cvo/improve-configurations-cvo.html  
   - title: Build your own rules
     entries:
-     - title: Learn about custom rules for FSx for ONTAP
-       url: /learn-about-custom-rules.html
+     - title: Learn about custom rules
+       url: /learn-custom-rules.html
      - title: Create a custom rule
        url: /create-custom-rule.html
      - title: Manage custom rules
