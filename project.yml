@@ -1,5 +1,5 @@
 settings:
-  name: "Well-architected systems"
+  name: "Well-architected dashboard"
   internal:
     pdf_enabled: true
     termcheck_enabled: true
@@ -17,7 +17,7 @@ sidebar:
     - title: What's new
       url: /whats-new.html
     - title: Learn about the well-architected dashboard
-      url: /learn-about-well-architected-dashboard.html
+      url: /learn-well-architected-dashboard.html
     - title: Learn about custom rules for FSx for ONTAP
       url: /learn-custom-rules.html
   - title: Supported products
@@ -25,15 +25,15 @@ sidebar:
     - title: Amazon FSx for NetApp ONTAP
       entries: 
         - title: Configuration analysis
-          url: /configuration-analysis-fsx.html
+          url: /fsx/configuration-analysis-fsx.html
         - title: Improve file system configurations
-          url: /improve-configurations-fsx.html
+          url: /fsx/improve-configurations-fsx.html
     - title: Cloud Volumes ONTAP
       entries:
         - title: Configuration analysis
-          url: /configuration-analysis-cvo.html
+          url: /cvo/configuration-analysis-cvo.html
         - title: Improve system configurations
-          url: /improve-configurations-cvo.html  
+          url: /cvo/improve-configurations-cvo.html  
   - title: Build your own rules
     entries:
      - title: Learn about custom rules
@@ -44,3 +44,7 @@ sidebar:
        url: /manage-custom-rules.html
   - title: Legal notices
     url: /legal-notices.html
+
+product-family:
+  name: NetApp Console
+  repo: console-family
