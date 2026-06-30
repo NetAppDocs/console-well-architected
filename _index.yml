@@ -18,7 +18,7 @@ indexpage:
           url: /configuration-analysis-cvo.html
     - title: Build your own rules
       links:
-        - title: Learn about custom rules for FSx for ONTAP
+        - title: Learn about custom rules
           url: /learn-custom-rules.html
         - title: Create a custom rule
           url: /create-custom-rule.html
