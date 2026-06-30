@@ -8,3 +8,9 @@ The well-architected dashboard in the Console is available for the following sto
 
 * link:https://docs.netapp.com/us-en/console-well-architected/configuration-analysis-fsx.html[Amazon FSx for NetApp ONTAP]
 * link:https://docs.netapp.com/us-en/console-well-architected/configuration-analysis-cvo.html[Cloud Volumes ONTAP in Microsoft Azure]
+
+=== Build your own custom rules
+
+Write custom rules in plain language to make sure your systems follow your organization's standards and NetApp best practices. Test the rules with a dry run, then schedule them to run across your environments.
+
+https://docs.netapp.com/us-en/workload-well-architected/learn-custom-rules.html[Learn more about custom rules^]
