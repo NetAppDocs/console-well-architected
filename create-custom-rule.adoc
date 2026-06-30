@@ -50,10 +50,10 @@ The AI analyzes your prompt and generates a rule definition.
 
 The rule builder displays:
 
-* *Parsed interpretation*: How the AI understood your prompt in plain language
-* *Rule definition*: The structured rule including resource type, condition logic, and evaluation criteria
-* *Reasoning*: Why the AI interpreted your prompt this way
-* *Confidence indicator*: How confident the system is in the interpretation
+* *Parsed interpretation*: How the AI understood your prompt in plain language.
+* *Rule definition*: The structured rule including resource type, condition logic, and evaluation criteria.
+* *Reasoning*: Why the AI interpreted your prompt this way.
+* *Confidence indicator*: How confident the system is in the interpretation.
 
 .Steps
 
@@ -73,7 +73,7 @@ The AI might ask you to choose from several options to better understand what yo
 
 == Test the rule
 
-Before scheduling the rule, run a one-time check to see which resources it will affect.
+Before scheduling the rule, run a one-time test to see which resources it will affect.
 
 .Steps
 
@@ -100,21 +100,9 @@ After you test your rule, you can save it as a draft or set it to run regularly.
 
 . Do one of the following:
 +
-[cols="30,70",options="header"]
-|===
-| To...
-| Do this...
-
-| Schedule regular evaluation
-| Set the evaluation frequency (minimum 1 hour, default 24 hours) and select *Schedule*. The rule is enabled and runs on the defined schedule.
-
-| Save without scheduling
-| Select *Save as draft*. The rule is saved but not evaluated until you schedule it.
-
-| Discard the rule
-| Select *Discard* to cancel rule creation and start over.
-
-|===
+* To schedule regular evaluation, set the evaluation frequency (minimum 1 hour, default 24 hours) and select *Schedule*. The rule is enabled and runs on the defined schedule.
+* To save without scheduling, select *Save as draft*. The rule is saved but not evaluated until you schedule it.
+* To discard the rule, select *Discard* to cancel rule creation and start over.
 
 .Result
 
