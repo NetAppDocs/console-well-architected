@@ -29,7 +29,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Lea
 
 == Best practices and recommendations for Cloud Volumes ONTAP systems
 
-NetApp assesses storage configurations to provide an in-depth view of ONTAP configuration best practices and for compliance with the AWS Well-Architected Framework. The assessment also recommends improvements and fixes.  
+NetApp assesses storage configurations to provide an in-depth view of ONTAP configuration best practices and for compliance with the Azure Well-Architected Framework. The assessment also recommends improvements and fixes.  
 
 The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, _security_, _operational excellence_, _cost optimization_, and _performance efficiency_.
 
