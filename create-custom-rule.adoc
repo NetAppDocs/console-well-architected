@@ -19,7 +19,7 @@ Create custom rules by describing them in plain language. The AI rule builder tu
 
 * You have configured AWS credentials with read-only access.
 * You have ONTAP credentials with viewer permissions.
-* You have a link and connector configured for FSx for ONTAP connectivity.
+* You have a link or agent configured for FSx for ONTAP connectivity.
 * You understand that custom rule creation uses NetApp's Bedrock AI service.
 
 .About this task
@@ -31,7 +31,8 @@ The rule creation process walks you through the steps: defining the rule, review
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon] and then select *Rule builder*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon] and then select *Well-architected*.
+. From the Well-architected menu, select *Rule builder*.
 +
 When you open the rule builder, it shows sample prompts to help you write your custom rule. You can select *Copy prompt* to copy a sample prompt into the AI dialog text box.
 
@@ -89,7 +90,7 @@ The system evaluates all resources in scope against your rule logic.
 
 . If some resources failed evaluation, review the error reasons:
 ** *AWS credential errors*: Read-only permissions may be insufficient for certain resources
-** *Connectivity errors*: Link or Connector might not be configured for specific file systems
+** *Connectivity errors*: Link or agent might not be configured for specific file systems
 ** *ONTAP permission errors*: The viewer user might not have access to certain resources
 
 == Save or schedule the rule
@@ -117,7 +118,7 @@ Low confidence interpretation::
 More information is needed. Answer the questions or rewrite your prompt with clear details about the resource type, limits, and conditions.
 
 Partial validation failures::
-Check which resources failed and why. Common causes are missing link or connector settings, or not having enough permissions. Fix the problem, then validate again.
+Check which resources failed and why. Common causes are missing link or agent settings, or not having enough permissions. Fix the problem, then validate again.
 
 Ambiguous prompt::
 Be more specific about what you want to check. Include the resource type, the condition, and the threshold. See the prompt examples for help.
