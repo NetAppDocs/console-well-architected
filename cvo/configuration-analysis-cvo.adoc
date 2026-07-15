@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: cvo/configuration-analysis-cvo.html
 keywords: Cloud Volumes ONTAP, configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
-summary: "NetApp Console analyzes storage system configurations daily to determine if any there are any configuration issues."  
+summary: "NetApp Console analyzes storage system configurations daily to determine if there are any configuration issues."  
 ---
 = Configuration analysis for Cloud Volumes ONTAP
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues. When issues are found, the Console shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
+NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, the Console shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
@@ -19,13 +19,7 @@ Key capabilities include:
 * Insights to action
 
 == Analysis requirements
-For a complete Cloud Volumes ONTAP system analysis, you must do the following: 
-
-* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[Deploy a NetApp Console agent^]. Console agent connectivity lets the Console analyze all Cloud Volumes ONTAP system configurations like data protection and performance.
-
-* Grant _view, planning, and analysis_ permissions in your AWS account. 
-+
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^]
+For a complete Cloud Volumes ONTAP system analysis, you must link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[deploy a NetApp Console agent^]. Console agent connectivity lets the Console analyze all Cloud Volumes ONTAP system configurations like data protection and performance.
 
 == Best practices and recommendations for Cloud Volumes ONTAP systems
 
