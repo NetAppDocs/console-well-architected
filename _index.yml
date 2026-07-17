@@ -2,7 +2,7 @@ indexpage:
   title: Well-architected dashboard in NetApp Console
   lead: NetApp Console helps you maintain reliable, secure, efficient, and cost-effective storage configurations aligned with your storage type's well-architected framework. The well-architected dashboard provides a unified view across accounts and regions, helps teams identify and prioritize risks, and supports custom rules for specific requirements.
   summary: NetApp Console helps you maintain and operate reliable, secure, efficient, and cost-effective configurations that align with the well-architected frameworks for the storage type you use.
-  keywords: amazon, fsx, cloud volumes ontap, microsoft azure, netapp, ontap, well-architected framework, NetApp Console
+  keywords: amazon, fsx, cloud volumes ontap, microsoft azure, google cloud netapp volumes, gcnv, netapp, ontap, well-architected framework, NetApp Console
   tiles: 
     - title: Get started
       links:
@@ -16,6 +16,8 @@ indexpage:
           url: /fsx/configuration-analysis-fsx.html
         - title: Cloud Volumes ONTAP  
           url: /cvo/configuration-analysis-cvo.html
+        - title: Google Cloud NetApp Volumes
+          url: /gcnv/configuration-analysis-gcnv.html
     - title: Build your own rules
       links:
         - title: Learn about custom rules
