@@ -18,6 +18,8 @@ Key capabilities include:
 * Proactive observability
 * Insights to action
 
+include::well-architected-workloads.adoc[]
+
 == Analysis requirements
 For a complete file system analysis, you must do the following: 
 

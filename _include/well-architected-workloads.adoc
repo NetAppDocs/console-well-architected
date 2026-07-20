@@ -1,0 +1,11 @@
+== How it works 
+
+Workload Factory analyzes your workloads running on supported cloud storage systems deployments daily. The analysis provides well-architected status, insights, and recommendations. 
+
+After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the Well-architected dashboard for the deployment. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by Workload Factory, while others require manual intervention. In this case, Workload Factory provides detailed instructions to help you implement the recommended changes.
+
+You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. When you dismiss a specific configuration analysis, Workload Factory does not include the configuration in the total optimization score.
+
+== Why it matters
+
+Workload Factory applies best practices to large storage, database, and VMware environments by combining ongoing assessment with recommendation insights and remediation. Automated fixes applied in the NetApp Console reduce human error, ensure uniform management, and preserve performance and reliability across your workload infrastructures.
