@@ -12,6 +12,6 @@ Learn what's new with the Well-architected component of Workload Factory.
 //tag::whats-new[]
 Learn what's new with the Well-Architected dashboard in NetApp Console.
 
-== 06 July 2026
+== 20 July 2026
 
-include::_whatsnew/2026-07-06.adoc[]
+include::_whatsnew/2026-07-20.adoc[]
