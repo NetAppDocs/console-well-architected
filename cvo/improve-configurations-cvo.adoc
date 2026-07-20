@@ -1,0 +1,41 @@
+---
+sidebar: sidebar
+permalink: cvo/improve-configurations-cvo.html
+keywords: improve configurations, optimize configurations, implement best practices, well-architected file system, Cloud Volumes ONTAP, Microsoft Azure
+summary: "Workload factory scans Cloud Volumes ONTAP configurations providing insights and recommendations to help you achieve operational excellence." 
+---
+= Implement well-architected Cloud Volumes ONTAP system configurations
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Using configuration analysis insights and recommendations, leverage NetApp to implement best practices for your Cloud Volumes ONTAP systems running on Microsoft Azure storage. You can easily review the well-architected status, learn about issues with your configurations, and get recommendations to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
+
+link:configuration-analysis-cvo.html[Learn about the configuration analysis and well-architected status.]
+
+== About this task
+NetApp analyzes Cloud Volumes ONTAP system deployments in Microsoft Azure daily. The daily analysis provides the well-architected status, and insights and recommendations to help you fix configuration issues so that your systems meet best practices. 
+
+You can view the recommendations for configuration issues with your systems without deploying a Console agent; however, Console agent connectivity allows NetApp to provide the most comprehensive analysis of your system resources. 
+
+After the daily analysis completes, the dashboard displays the total number of well-architected resources, the number of resources in a critical state, and the number of resources in a warning state. Configurations are categorized by the pillars of the well-architected framework: reliability, operational excellence, cost optimization, performance efficiency, and security. The dashboard also includes a table that lists all configurations, the well-architected status of those configurations, the severity, category, resource type (volume or system), impacted resources, and the option to view the recommendation when the configuration is not optimized. 
+
+== Before you begin
+
+* You must link:https://console.netapp.com/add-working-environment/choose-type[add a Cloud Volumes ONTAP system] to NetApp Console to view the well-architected status and recommendations for configuration issues.
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html[You should deploy a Console agent] for the most comprehensive analysis of your system resources.
+
+== View recommendations for configuration issues
+You can view recommendations for configuration issues after the daily analysis completes. Recommendations explain best practices and potential risks of unoptimized configurations. You can also download a CSV file of the recommendations.
+
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration.
++
+Optionally, select image:button_download.png["A screenshot of the download icon"]to download a CSV file of the recommendations for all configurations.
+. Review the recommendation.
+
+.What's next
+
+Fix configuration issues to keep your systems running at optimal performance.
