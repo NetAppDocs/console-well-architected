@@ -36,6 +36,95 @@ You can view recommendations for configuration issues after the daily analysis c
 Optionally, select image:button_download.png["A screenshot of the download icon"]to download a CSV file of the recommendations for all configurations.
 . Review the recommendation.
 
-.What's next
+== Fix a configuration issue
+You can fix configuration issues for a Cloud Volumes ONTAP system or for selected volumes in a file system. You can select one or more configurations to fix.
 
-Fix configuration issues to keep your systems running at optimal performance.
+The remediation process can cause instance downtimes or service interruptions. Review each recommendation carefully before fixing a configuration issue.
+
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration.
++
+Make sure you review the recommendation carefully. The recommendation explains best practices and potential pitfalls of unoptimized configurations.
+. Select to *Fix*.
++
+When *View and fix* is an option, select the impacted volumes to fix. 
+. Review the summary and action items that appear in the dialog to learn what happens if you fix the issue. Some operations can cause instance downtimes or service interruptions. 
+. Select *Continue* to fix the configuration issue. 
+
+.Result
+Workload Factory starts the process to fix the issue. Select the account settings menu and then select *Tracker* to view the status of the operation.
+
+== Dismiss a configuration analysis
+Stop a configuration analysis for a Cloud Volumes ONTAP system or for selected volumes. You can restart the analysis when needed.
+
+[role="tabbed-block"]
+====
+
+.Dismiss a configuration analysis for a file system
+--
+
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration. 
+. Under Configurations, identify the configuration that doesn't apply to your environment and then select *Dismiss*.  
+. In the Dismiss configuration dialog, select *Dismiss* to stop the configuration analysis.
+--
+
+.Dismiss a configuration analysis for a volume
+--
+
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration.  
+. Under Configurations, identify the configuration to dismiss for selected volumes and then select *View and fix*. 
+. Identify the volumes to dismiss from the configuration analysis. 
++
+* For one volume: select the actions menu and then select *Dismiss volume*.
+* For multiple volumes: select the volumes and then select *Dismiss* next to Bulk action.
+. Select *Dismiss* to stop the analysis for the configuration.
+. In the Dismiss volumes dialog, select *Dismiss* to confirm.
+--
+====
+
+.Result
+The configuration analysis stops for the file system or selected volumes. 
+
+You can reactivate the analysis at any time.
+
+== Reactivate a dismissed configuration analysis
+
+Reactivate a dismissed configuration analysis for a Cloud Volumes ONTAP system at any time. You can select one or more configurations to reactivate.
+
+[role="tabbed-block"]
+====
+
+.Reactivate a configuration analysis for a file system
+--
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.   
+. Select *Dismissed configurations*. 
+. Identify the configuration you want to reactivate and select *Reactivate*.  
+
+--
+.Reactivate a configuration analysis for a volume
+--
+
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. Select *Dismissed configurations*. 
+. Identify the volume(s) to reactivate from the configuration analysis. 
+
+* For one volume: select the actions menu and then select *Reactivate volume*.
+* For multiple volumes: select the volumes and then select *Reactivate* next to Bulk action.
+
+--
+====
+
+.Result
+The system reactivates the configuration analysis. A new analysis occurs daily.
