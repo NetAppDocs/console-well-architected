@@ -23,12 +23,11 @@ The remediation process can cause instance downtimes or service interruptions. R
 
 
 .Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.  
-. Select *View issues* for any configuration. Make sure you review the recommendation carefully. 
-+ 
-The recommendation explains best practices and potential pitfalls of unoptimized configurations.
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration. 
++
+Make sure you review the recommendation carefully. The recommendation explains best practices and potential pitfalls of unoptimized configurations.
 . Select to *Fix*.
 +
 When *View and fix* is an option, select the impacted volumes to fix. 
@@ -48,12 +47,8 @@ Stop a configuration analysis for an FSx for ONTAP file system or for selected v
 --
 
 .Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.  
-. Select *View issues* for any configuration. Make sure you review the recommendation carefully. 
-+ 
-The recommendation explains best practices and potential pitfalls of unoptimized configurations.
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
 . Under Configurations, identify the configuration that doesn't apply to your environment and then select *Dismiss*.  
 . In the Dismiss configuration dialog, select *Dismiss* to stop the configuration analysis.
 --
@@ -62,9 +57,8 @@ The recommendation explains best practices and potential pitfalls of unoptimized
 --
 
 .Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.   
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
 . Under Configurations, identify the configuration to dismiss for selected volumes and then select *View and fix*. 
 . Identify the volumes to dismiss from the configuration analysis. 
 +
@@ -90,10 +84,9 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 .Reactivate a configuration analysis for a file system
 --
 .Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.   
-. Select *Dismissed configurations*. 
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, *Dismissed configurations*. 
 . Identify the configuration you want to reactivate and select *Reactivate*.  
 
 --
