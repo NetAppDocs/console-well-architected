@@ -2,30 +2,30 @@
 sidebar: sidebar
 permalink: learn-well-architected-dashboard.html
 keywords: well-architected, best practices, well-architected system, best practices, well-architected framework, well-architected configurations, system management, system optimization, system configuration, system analysis
-summary: "NetApp Console scans system configurations for reliability, security, operational excellence, cost optimization, and performance efficiency, providing insights and recommendations to help you achieve operational excellence." 
+summary: "The well-architected dashboard in NetApp Console scans system configurations for reliability, security, operational excellence, cost optimization, and performance efficiency, providing insights and recommendations to help you achieve operational excellence." 
 ---
 = Learn about the well-architected dashboard in NetApp Console
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-NetApp Console helps you maintain and operate reliable, secure, efficient, and cost-effective configurations that align with the well-architected frameworks for the storage type you use. The well-architected dashboard provides a unified view across accounts and regions, helps teams identify and prioritize risks, and supports custom rules for specific requirements. Automatic daily scans of your storage system configurations provide insights and recommendations to help you optimize your storage environments.
+The well-architected dashboard in NetApp Console helps you maintain and operate reliable, secure, efficient, and cost-effective configurations that align with the well-architected frameworks for the storage type you use. The dashboard provides a unified view across accounts and regions, helps teams identify and prioritize risks, and supports custom rules for specific requirements. Automatic daily scans of your storage system configurations provide insights and recommendations to help you optimize your storage environments.
 
 == How it works 
 
-NetApp Console analyzes your configurations daily. The analysis provides well-architected status, insights, and recommendations. 
+The well-architected dashboard analyzes your configurations daily. The analysis provides well-architected status, insights, and recommendations. 
 
-After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the well-architected dashboard for the deployment. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by NetApp Console, while others require manual intervention. In this case, NetApp Console provides detailed instructions to help you implement the recommended changes.
+After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the well-architected dashboard. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by the well-architected dashboard, while others require manual intervention. In this case, the well-architected dashboard provides detailed instructions to help you implement the recommended changes.
 
-You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. When you dismiss a specific configuration analysis, NetApp Console does not include the configuration in the total optimization score.
+You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. When you dismiss a specific configuration analysis, the well-architected dashboard does not include the configuration in the total optimization score.
 
 == Why it matters
 
-NetApp Console applies best practices to large storage, database, and VMware environments by combining ongoing assessment with recommendation insights and remediation. Automated fixes applied in the NetApp Console reduce human error, ensure uniform management, and preserve performance and reliability across your system infrastructures.
+The well-architected dashboard in NetApp Console applies best practices to large storage, database, and VMware environments by combining ongoing assessment with recommendation insights and remediation. Automated remediation applied in the well-architected dashboard reduces human error, ensures uniform management, and preserves performance and reliability across your system infrastructures.
 
 == Supported storage systems
 
-The following storage systems are supported in the well-architected dashboard in the Console:
+The well-architected dashboard in the Console supports the following storage systems:
 
 * Amazon FSx for NetApp ONTAP
 * Cloud Volumes ONTAP in Microsoft Azure

@@ -13,4 +13,4 @@ The well-architected dashboard in the Console is available for the following sto
 
 Write custom rules in plain language to make sure your systems follow your organization's standards and NetApp best practices. Test the rules with a dry run, then schedule them to run across your environments.
 
-https://docs.netapp.com/us-en/workload-well-architected/learn-custom-rules.html[Learn more about custom rules^]
+https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html[Learn more about custom rules]

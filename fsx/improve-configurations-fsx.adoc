@@ -2,27 +2,25 @@
 sidebar: sidebar
 permalink: fsx/improve-configurations-fsx.html
 keywords: improve configurations, optimize configurations, implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP
-summary: "Workload Factory scans Amazon FSx for NetApp ONTAP configurations providing insights and recommendations to help you achieve operational excellence." 
+summary: "The well-architected dashboard scans Amazon FSx for NetApp ONTAP configurations providing insights and recommendations to help you achieve operational excellence." 
 ---
 = Implement well-architected FSx for ONTAP file system configurations
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Using configuration analysis insights and recommendations, leverage Workload Factory to implement best practices for your FSx for ONTAP file systems. You can easily review the well-architected status, learn about issues with your configurations, take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
+Using configuration analysis insights and recommendations, leverage NetApp to implement best practices for your FSx for ONTAP file systems. You can easily review the well-architected status, learn about issues with your configurations, take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
 
 You can also dismiss the analysis of specific storage configurations that don't apply to your storage environment to avoid unnecessary alerts and inaccurate optimization results.
 
-link:configuration-analysis.html[Learn about the configuration analysis and well-architected status in Workload Factory.]
+link:configuration-analysis-fsx.html[Learn about the configuration analysis and well-architected status.]
 
 == About this task
-Workload Factory analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. The daily analysis provides the well-architected status, and insights and recommendations with options to automatically fix configuration issues so that your file system meets best practices. 
+The well-architected dashboard analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. The daily analysis provides the well-architected status, insights, and recommendations. You can automatically fix configuration issues to meet best practices.
 
-Link or Console agent connectivity allows Workload Factory to complete a comprehensive scan of your file systems for issues with performance, data protection, and configurations. 
+Link or Console agent connectivity allows the well-architected dashboard in the NetApp Console to complete a comprehensive scan of your file systems for issues with performance, data protection, and configurations. This ensures that you receive accurate insights and recommendations for optimizing your FSx for ONTAP file systems.
 
-You have options to review the recommendations for configuration issues with your file systems and fix the issues from the Storage within the Workload Factory console. 
-
-Because requirements for storage configurations vary, you can dismiss the analysis of specific configurations that don't apply to your storage environment. This helps you avoid unnecessary alerts and inaccurate optimization results. When a specific configuration analysis is dismissed, the configuration isn't included in the total optimization score.
+Storage configuration requirements vary. You can dismiss the analysis of specific configurations that don't apply to your storage environment. This helps you avoid unnecessary alerts and inaccurate optimization results.
 
 == Before you begin
 
@@ -32,7 +30,7 @@ Because requirements for storage configurations vary, you can dismiss the analys
 == Fix a configuration issue
 You can fix configuration issues for an FSx for ONTAP file system or for selected volumes in a file system. You can select one or more configurations to fix.
 
-The remediation process can cause instance downtimes or service interruptions. Review each recommendation carefully before fixing a configuration issue.
+Fixing configuration issues can cause instance downtimes or service interruptions. Review each recommendation carefully before fixing a configuration issue.
 
 
 .Steps
@@ -44,7 +42,7 @@ Make sure you review the recommendation carefully. The recommendation explains b
 . Select to *Fix*.
 +
 When *View and fix* is an option, select the impacted volumes to fix. 
-. Review the summary and action items that appear in the dialog to learn what happens if you fix the issue. Some operations can cause instance downtimes or service interruptions. 
+. Review the summary and action items in the dialog to learn what happens if you fix the issue. Some operations can cause instance downtimes or service interruptions. 
 . Select *Continue* to fix the configuration issue. 
 
 .Result
@@ -99,7 +97,7 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 .Steps
 . Log in to the link:https://console.netapp.com/home[NetApp Console^].
 . From the NetApp Console menu, select *Workloads* and then *Well-architected*.
-. From the Well-architected dashboard, *Dismissed configurations*. 
+. From the Well-architected dashboard, select *Dismissed configurations*. 
 . Identify the configuration you want to reactivate and select *Reactivate*.  
 
 --
@@ -120,4 +118,4 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 ====
 
 .Result
-The system reactivates the configuration analysis. A new analysis occurs daily.
+The configuration analysis reactivates. Workload Factory runs a new analysis daily.
