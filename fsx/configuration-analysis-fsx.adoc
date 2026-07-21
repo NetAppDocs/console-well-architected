@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: fsx/configuration-analysis-fsx.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
-summary: "The well-architected dashboard analyzes storage system configurations regularly to determine if any there are any configuration issues."  
+summary: "The well-architected dashboard analyzes FSx for ONTAP file system configurations regularly to determine if any there are any configuration issues."  
 ---
 = Configuration analysis for Amazon FSx for NetApp ONTAP
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-The well-architected dashboard in NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
+The well-architected dashboard in NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues with your Amazon FSx for NetApp ONTAP file systems. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
