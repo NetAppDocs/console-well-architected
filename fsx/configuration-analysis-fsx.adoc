@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: fsx/configuration-analysis-fsx.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
-summary: "NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues."  
+summary: "The well-architected dashboard analyzes FSx for ONTAP file system configurations regularly to determine if any there are any configuration issues."  
 ---
 = Configuration analysis for Amazon FSx for NetApp ONTAP
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues. When issues are found, NetApp Console shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
+The well-architected dashboard in NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues with your Amazon FSx for NetApp ONTAP file systems. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
@@ -23,7 +23,7 @@ include::well-architected-workloads.adoc[]
 == Analysis requirements
 For a complete file system analysis, you must do the following: 
 
-* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[Deploy a NetApp Console agent^] or link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link^]. Console agent and link connectivity let NetApp Console analyze all file system configurations like data protection and performance.
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[Deploy a NetApp Console agent^] or link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link^] to set up connectivity between the file system and NetApp Console.
 
 * Grant _view, planning, and analysis_ permissions in your AWS account. 
 +
@@ -31,7 +31,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Lea
 
 == Best practices and recommendations for storage workloads
 
-Workload Factory assesses storage configurations against ONTAP best practices and the AWS Well-Architected Framework. The assessment also recommends improvements and fixes.  
+The well-architected dashboard assesses storage configurations against ONTAP best practices and the AWS Well-Architected Framework. The assessment also recommends improvements and fixes.  
 
 The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, _security_, _operational excellence_, _cost optimization_, and _performance efficiency_.
 
@@ -48,15 +48,15 @@ Schedule local snapshots for efficient backup and quick restores. Snapshots are 
 
 * *Cross-region replication*
 +
-Cross-region replication ensures that your data is replicated to another AWS region, providing enhanced data durability and availability. Workload Factory recommends setting up cross-region replication to help with disaster recovery and compliance. 
+Cross-region replication ensures that your data is replicated to another AWS region, providing enhanced data durability and availability. Set up cross-region replication to support disaster recovery and compliance. 
 
 * *Set up data replication*
 +
-To extend data reliability, data can be replicated to an FSx for ONTAP file system in the same region or in another region. Set up data replication to support migration, disaster recovery, and long-term retention across file systems. 
+To extend data reliability, replicate data to an FSx for ONTAP file system in the same region or in another region. Set up data replication to support migration, disaster recovery, and long-term retention across file systems. 
 
 * *Increase SSD capacity threshold*
 +
-The SSD storage tier capacity should not exceed 80% utilization. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your file system. Running out of capacity causes data volumes to become read-only. Services trying to write new data also fail.
+The SSD storage tier capacity should not exceed 80% utilization. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your file system. When capacity runs out, data volumes become read-only. Services trying to write new data also fail.
 
 * *Match labels to ensure data reliability*
 +
@@ -64,7 +64,7 @@ The snapshot policy labels of the source volume and the replication policy label
 
 * *Increase file capacity threshold* 
 +
-The file capacity threshold should be raised to avoid hitting the volume capacity limit. Low file capacity (inodes) prevents writing additional data to the volume. Workload Factory recommends maintaining file capacity utilization below 80%. Available file capacity is required to create new files in the volume. 
+The file capacity threshold should be raised to avoid hitting the volume capacity limit. Low file capacity (inodes) prevents writing additional data to the volume. Workload Factory recommends maintaining file capacity utilization below 80% to allow new file creation. 
 
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
@@ -86,7 +86,7 @@ Automatic capacity management should be enabled to regularly ensure that the SSD
 
 * *Volume capacity utilization threshold*
 +
-Workload Factory recommends that volume capacity doesn't exceed 80% utilization on an ongoing basis. This might impact data reads and writes to your application. Volume capacity increases can be manual or automatic using the volume autogrow feature. 
+Workload Factory recommends that volume capacity doesn't exceed 80% utilization. This might impact data reads and writes to your application. Volume capacity increases can be manual or automatic using the volume autogrow feature. 
 
 * *Volume utilization nearing full*
 +
@@ -109,7 +109,7 @@ Cost optimization helps you get the most value for your business while keeping c
 
 * *Optimize TCO by tiering cold data* 
 +
-Enable cold data tiering to reduce SSD storage tier utilization. Workload Factory recommends applying a tiering policy to every volume. FSx for ONTAP scans the data continuously to detect cold data and move it to the capacity storage pool tier without disruption. 
+Enable cold data tiering to reduce SSD storage tier utilization. Workload Factory recommends applying a tiering policy to every volume. FSx for ONTAP continuously scans the data for cold data and moves it to the capacity pool tier without disruption. 
 
 * *Enable storage efficiencies* 
 +
@@ -117,7 +117,7 @@ Enable storage efficiencies — compaction, compression, and deduplication — t
 
 * *Unnecessary snapshot and backup deletion*
 +
-Snapshots and backups that are no longer needed should be deleted to reduce costs.
+Delete snapshots and backups that are no longer needed to reduce costs.
 
 * *Inactive block devices*
 +
@@ -125,7 +125,7 @@ After a block device isn't used for seven days, Workload Factory recommends arch
 
 * *Underutilized SSD capacity*
 +
-An underutilized SSD capacity tier incurs unnecessary costs. Workload Factory recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and the system doesn't support other file system operations during this time.
+An underutilized SSD capacity tier adds unnecessary costs. Workload Factory recommends reducing the SSD tier capacity while maintaining a 20% free space buffer. A decrease operation takes several hours to several days, and other file system operations are unsupported during this time.
 
 * *Inactive NAS volumes*
 +
@@ -134,4 +134,4 @@ The configuration analysis identifies NAS volumes that are not actively used and
 
 .What's next
 
-link:fsx/improve-configurations-fsx.html[Implement well-architected FSx for ONTAP file system configurations]
+link:improve-configurations-fsx.html[Implement well-architected FSx for ONTAP file system configurations]
