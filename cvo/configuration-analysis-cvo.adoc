@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: cvo/configuration-analysis-cvo.html
 keywords: Cloud Volumes ONTAP, configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
-summary: "NetApp Console analyzes storage system configurations daily to determine if there are any configuration issues."  
+summary: "The well-architected dashboard in NetApp Console analyzes storage system configurations daily to determine if there are any configuration issues."  
 ---
 = Configuration analysis for Cloud Volumes ONTAP
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, the Console shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
+The well-architected dashboard in NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
@@ -19,16 +19,16 @@ Key capabilities include:
 * Insights to action
 
 == Analysis requirements
-For a complete Cloud Volumes ONTAP system analysis, you must link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[deploy a NetApp Console agent^]. Console agent connectivity lets the Console analyze all Cloud Volumes ONTAP system configurations like data protection and performance.
+For a complete Cloud Volumes ONTAP system analysis, you must link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[deploy a NetApp Console agent^] to set up connectivity between your systems and the NetApp Console.
 
 == Best practices and recommendations for Cloud Volumes ONTAP systems
 
-NetApp assesses storage configurations to provide an in-depth view of ONTAP configuration best practices and for compliance with the Azure Well-Architected Framework. The assessment also recommends improvements and fixes.  
+The well-architected dashboard assesses storage configurations to provide an in-depth view of ONTAP configuration best practices and for compliance with the Azure Well-Architected Framework. The assessment also recommends improvements and fixes.  
 
 The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, _security_, _operational excellence_, _cost optimization_, and _performance efficiency_.
 
 === Reliability 
-Reliability ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. 
+Reliability ensures that workloads perform their intended functions correctly and consistently, even during disruptions. 
 
 * *Schedule local snapshots*
 +
@@ -36,7 +36,7 @@ Schedule local snapshots for efficient backup and quick restores. Snapshots are 
 
 * *SSD capacity threshold*
 +
-The SSD storage tier capacity should not exceed 80% utilization on an ongoing basis. Exceeding this threshold can degrade throughput and cause data volumes to become read-only, causing write operations to fail.
+The SSD storage tier capacity should not exceed 80% utilization on an ongoing basis. Exceeding this threshold can degrade throughput, make data volumes read-only, and cause write operations to fail.
 
 
 === Security 
@@ -55,7 +55,7 @@ NetApp recommends that volume capacity doesn't exceed 80% utilization on an ongo
 
 * *Cache relationship write mode*
 +
-For optimal performance, NetApp recommends the cache relationship write mode that best suits your workload. Write-around mode provides better performance for read-heavy workloads with small files, whereas write-back mode provides better performance for write-heavy workloads with large files.
+For optimal performance, NetApp recommends the cache relationship write mode that best suits your workload. Write-around mode provides better performance for read-heavy workloads with small files, while write-back mode provides better performance for write-heavy workloads with large files.
 
 * *ONTAP cache volume size*
 +
@@ -70,7 +70,7 @@ Cost optimization helps you get the most value for your business while keeping c
 
 * *Identify underutilized SSD capacity*
 +
-An underutilized SSD capacity tier might be incurring unnecessary costs. NetApp recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and the system does not support other file system operations during this time.
+An underutilized SSD capacity tier can incur unnecessary costs. NetApp recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation takes several hours to several days, and other system operations are unsupported during this time.
 
 * *Data tiering policy*
 +

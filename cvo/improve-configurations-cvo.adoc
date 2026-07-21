@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: cvo/improve-configurations-cvo.html
 keywords: improve configurations, optimize configurations, implement best practices, well-architected file system, Cloud Volumes ONTAP, Microsoft Azure
-summary: "Workload factory scans Cloud Volumes ONTAP configurations providing insights and recommendations to help you achieve operational excellence." 
+summary: "The well-architected dashboard scans Cloud Volumes ONTAP configurations providing insights and recommendations to help you achieve operational excellence." 
 ---
 = Implement well-architected Cloud Volumes ONTAP system configurations
 :icons: font
@@ -14,11 +14,13 @@ Using configuration analysis insights and recommendations, leverage NetApp to im
 link:configuration-analysis-cvo.html[Learn about the configuration analysis and well-architected status.]
 
 == About this task
-NetApp analyzes Cloud Volumes ONTAP system deployments in Microsoft Azure daily. The daily analysis provides the well-architected status, and insights and recommendations to help you fix configuration issues so that your systems meet best practices. 
+The well-architected dashboard analyzes Cloud Volumes ONTAP system deployment configurations on Microsoft Azure daily. The daily analysis provides the well-architected status, insights, and recommendations. 
 
-You can view the recommendations for configuration issues with your systems without deploying a Console agent; however, Console agent connectivity allows NetApp to provide the most comprehensive analysis of your system resources. 
+//You can automatically fix configuration issues to meet best practices.
 
-After the daily analysis completes, the dashboard displays the total number of well-architected resources, the number of resources in a critical state, and the number of resources in a warning state. Configurations are categorized by the pillars of the well-architected framework: reliability, operational excellence, cost optimization, performance efficiency, and security. The dashboard also includes a table that lists all configurations, the well-architected status of those configurations, the severity, category, resource type (volume or system), impacted resources, and the option to view the recommendation when the configuration is not optimized. 
+Link or Console agent connectivity allows the well-architected dashboard in the NetApp Console to complete a comprehensive scan of your Cloud Volumes ONTAP systems for issues with performance, data protection, and configurations. This ensures that you receive accurate insights and recommendations for optimizing your Cloud Volumes ONTAP systems.
+
+Storage configuration requirements vary. You can dismiss the analysis of specific configurations that don't apply to your storage environment. This helps you avoid unnecessary alerts and inaccurate optimization results.
 
 == Before you begin
 
