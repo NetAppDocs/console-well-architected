@@ -19,10 +19,6 @@ Schedule local snapshots for efficient backup and quick restores. Snapshots are 
 +
 Cross-region replication ensures that your data is replicated to another AWS region, providing enhanced data durability and availability. Set up cross-region replication to support disaster recovery and compliance. 
 
-* *Set up data replication*
-+
-To extend data reliability, replicate data to an FSx for ONTAP file system in the same region or in another region. Set up data replication to support migration, disaster recovery, and long-term retention across file systems. 
-
 * *SSD capacity headroom*
 +
 The SSD storage tier capacity should not exceed 80% utilization. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your file system. When capacity runs out, data volumes become read-only. Services trying to write new data also fail.
@@ -56,10 +52,6 @@ Automatic capacity management should be enabled to regularly ensure that the SSD
 * *Volume capacity headroom*
 +
 Workload Factory recommends that volume capacity doesn't exceed 80% utilization. This might impact data reads and writes to your application. Volume capacity increases can be manual or automatic using the volume autogrow feature. 
-
-* *Volume nearing full capacity*
-+
-When a volume is nearing full capacity, Workload Factory recommends taking action to increase the volume capacity to avoid potential application disruptions.
 
 * *FlexCache write mode*
 +
