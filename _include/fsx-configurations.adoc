@@ -7,7 +7,7 @@ The well-architected analysis categorizes configurations in the following pillar
 === Reliability 
 Reliability ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. 
  
-* *Schedule volume backups*
+* *Volume backups*
 +
 Backing up your volumes helps support data retention and compliance needs. Use volume backups to set up automated backups and retention for your data.
 
