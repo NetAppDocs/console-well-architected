@@ -13,7 +13,11 @@ Backing up your volumes helps support data retention and compliance needs. Use v
 
 * *Snapshot policy*
 +
-Schedule local snapshots for efficient backup and quick restores. Snapshots are instant, point-in-time images of your volumes. 
+Schedule local snapshots for efficient backup and quick restores. Snapshots are instant, point-in-time images of your volumes. This recommendation doesn't apply to database environments.
+
+* *Application-consistent snapshots*
++ 
+For database environments, use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. This keeps your apps running smoothly and your data safe. SnapCenter makes backups easier and helps you restore data quickly and correctly, reducing downtime and protecting your most important workloads.
 
 * *Cross-region replication*
 +
@@ -70,7 +74,7 @@ Cost optimization helps you get the most value for your business while keeping c
 
 * *Cold data tiering* 
 +
-Enable cold data tiering to reduce SSD storage tier utilization. Workload Factory recommends applying a tiering policy to every volume. FSx for ONTAP continuously scans the data for cold data and moves it to the capacity pool tier without disruption. 
+Enable cold data tiering to reduce SSD storage tier utilization. Workload Factory recommends applying a tiering policy to every volume focused on general data storage. For database volumes, we'll recommend enabling cold data tiering where appropriate. FSx for ONTAP continuously scans the data for cold data and moves it to the capacity pool tier without disruption. 
 
 * *Storage efficiencies* 
 +
@@ -96,6 +100,10 @@ An overprovisioned SSD capacity tier adds unnecessary costs. Workload Factory re
 +
 The configuration analysis identifies NAS volumes that are not actively used and recommends deleting or archiving the volumes to reduce costs.
 
+* *Thin provisioning*
++
+Workload Factory recommends configuring thin provisioning for FSx for ONTAP volumes hosting database instances. This approach allows more logical data to be stored than physically available.
+
 === Performance efficiency
 Performance efficiency helps you ensure that your storage resources are used effectively and that workloads perform optimally.
 
@@ -106,3 +114,11 @@ Workload Factory recommends rebalancing your FlexGroup volumes to improve effici
 * *FlexVol volumes rebalance*
 +
 Workload Factory recommends rebalancing your FlexVol volumes to improve efficiency. After scaling out, capacity and workload activity can become uneven across the volume. 
+
+* *Operating System (OS) type*
++
+Workload Factory recommends ensuring that the ONTAP LUN operating system (OS) type value matches the operating system partitioning scheme to achieve I/O alignment. Incorrect configuration might reduce performance.
+
+* *Block device space management*
++ 
+Workload Factory recommends configuring block device space settings for LUNs used by database host instances to prevent write failures and improve space efficiency on FSx for ONTAP. This configuration applies to the recommended combination of settings for thin-provisioned volumes: space reservation, space allocation, and fractional reserve.
