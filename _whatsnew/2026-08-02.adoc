@@ -1,7 +1,5 @@
-=== Updated configuration names for FSx for ONTAP in the Well-Architected Dashboard
-The Well-Architected Dashboard in NetApp Console now features updated storage configuration names for FSx for ONTAP to improve clarity and consistency. These changes help users more easily identify and understand the configurations and their associated recommendations.
-
-Name changes include: 
+=== Updated configuration names for FSx for ONTAP in the well-architected dashboard
+The well-architected dashboard in NetApp Console now features updated storage configuration names for FSx for ONTAP to improve clarity and consistency. These changes help users more easily identify and understand the configurations and their associated recommendations.
 
 [cols="1,1", options="header"]
 |===
