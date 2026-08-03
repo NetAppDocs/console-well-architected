@@ -18,7 +18,7 @@ Key capabilities include:
 * Proactive observability
 * Insights to action
 
-include::well-architected-workloads.adoc[]
+include::_include/well-architected-workloads.adoc[]
 
 == Analysis requirements
 For a complete file system analysis, you must do the following: 
@@ -29,7 +29,7 @@ For a complete file system analysis, you must do the following:
 +
 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^]
 
-include::fsx-configurations.adoc[]
+include::_include/fsx-configurations.adoc[]
 
 
 .What's next
