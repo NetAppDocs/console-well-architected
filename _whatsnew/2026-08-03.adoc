@@ -58,5 +58,11 @@ The well-architected dashboard in NetApp Console now features updated storage co
 |Ransomware protection (ARP/AI)
 |===
 
+=== Fix, dismiss, and reactivate configurations for Cloud Volumes ONTAP in Microsoft Azure
+The well-architected dashboard in NetApp Console now allows you to fix configuration recommendations for your Cloud Volumes ONTAP systems. 
 
+You can also dismiss one or more configurations from the well-architected analysis. This allows you to ignore specific configurations that don't apply to your environment. 
 
+If you want to include a dismissed configuration later, you can reactivate it in the well-architected dashboard. This restores the configuration to the analysis and allows you to get recommendations and fixes for it.
+
+* link:https://docs.netapp.com/us-en/console-well-architected/cvo/\improve-configurations-cvo.html[Fix, dismiss, and reactivate configurations for Cloud Volumes ONTAP in Microsoft Azure]

@@ -13,9 +13,9 @@ Learn what's new with the well-architected dashboard in NetApp Console.
 
 //tag::whats-new[]
 
-== 02 August 2026
+== 03 August 2026
 
-include::_whatsnew/2026-08-02.adoc[]
+include::_whatsnew/2026-08-03.adoc[]
 
 == 20 July 2026
 
