@@ -18,6 +18,8 @@ Key capabilities include:
 * Proactive observability
 * Insights to action
 
+include::well-architected-workloads.adoc[]
+
 == Analysis requirements
 For a complete Cloud Volumes ONTAP system analysis, you must link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[deploy a NetApp Console agent^] to set up connectivity between your systems and the NetApp Console.
 
@@ -30,14 +32,13 @@ The well-architected analysis categorizes configurations in the following pillar
 === Reliability 
 Reliability ensures that workloads perform their intended functions correctly and consistently, even during disruptions. 
 
-* *Schedule local snapshots*
+* *Snapshot policy*
 +
 Schedule local snapshots for efficient backup and quick restores. Snapshots are instant, point-in-time images of your volumes. 
 
-* *SSD capacity threshold*
+* *SSD capacity headroom*
 +
-The SSD storage tier capacity should not exceed 80% utilization on an ongoing basis. Exceeding this threshold can degrade throughput, make data volumes read-only, and cause write operations to fail.
-
+The SSD storage tier capacity should not exceed 80% utilization. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your system. When capacity runs out, data volumes become read-only. Services trying to write new data also fail.
 
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
@@ -49,17 +50,17 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) helps enhance cyber res
 === Operational excellence
 Operational excellence focuses on delivering the best architecture and business value. 
 
-* *Volume capacity utilization threshold*
+* *Volume capacity headroom*
 +
-NetApp recommends that volume capacity doesn't exceed 80% utilization on an ongoing basis. This might impact data reads and writes to your application. Volume capacity increases can be manual or automatic using the volume autogrow feature. 
+We recommend that volume capacity doesn't exceed 80% utilization. This might impact data reads and writes to your application. Volume capacity increases can be manual or automatic using the volume autogrow feature. 
 
-* *Cache relationship write mode*
+* *FlexCache write mode*
 +
-For optimal performance, NetApp recommends the cache relationship write mode that best suits your workload. Write-around mode provides better performance for read-heavy workloads with small files, while write-back mode provides better performance for write-heavy workloads with large files.
+For optimal performance, we recommend the FlexCache write mode that best suits your workload. Write-around mode provides better performance for read-heavy workloads with small files, while write-back mode provides better performance for write-heavy workloads with large files.
 
-* *ONTAP cache volume size*
+* *FlexCache replica size*
 +
-NetApp recommends enabling volume autosize and scrubbing on cache volumes to maintain optimal size and focus the cache on frequently accessed (hot) data for peak efficiency.
+We recommend enabling volume autosize and scrubbing on cache volumes to maintain optimal size and focus the cache on frequently accessed (hot) data for peak efficiency.
 
 * *ONTAP version compliance*
 +
@@ -68,14 +69,14 @@ Upgrade to the latest ONTAP version for full compatibility, support, and access 
 === Cost optimization
 Cost optimization helps you get the most value for your business while keeping costs low.
 
-* *Identify underutilized SSD capacity*
+* *Overprovisioned SSD capacity*
 +
-An underutilized SSD capacity tier can incur unnecessary costs. NetApp recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation takes several hours to several days, and other system operations are unsupported during this time.
+An overprovisioned SSD capacity tier adds unnecessary costs. We recommend reducing the SSD tier capacity while maintaining a 20% free space buffer. A decrease operation takes several hours to several days, and other file system operations are unsupported during this time.
 
-* *Data tiering policy*
+* *Cold data tiering*
 +
-Enable cold data tiering to move cold data from the SSD storage tier to lower-cost storage. Azure Blob Storage serves as the capacity tier for inactive data.
+Enable cold data tiering to move cold data from the SSD storage tier to lower-cost storage. We recommend applying a tiering policy to every volume. Azure Blob Storage serves as the capacity tier for inactive data.
 
 .What's next
 
-link:improve-configurations-cvo.html[Implement well-architected Cloud Volumes ONTAP system configurations]
+link:https://docs.netapp.com/us-en/console-well-architected/cvo/improve-configurations-cvo.html[Implement well-architected Cloud Volumes ONTAP system configurations]

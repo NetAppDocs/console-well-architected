@@ -12,10 +12,12 @@ settings:
 
 sidebar: 
   entries:
-  - title: Get started
+  - title: Release notes
     entries:
     - title: What's new
       url: /whats-new.html
+  - title: Get started
+    entries:
     - title: Learn about the well-architected dashboard
       url: /learn-well-architected-dashboard.html
   - title: Supported products
