@@ -69,6 +69,18 @@ Workload Factory recommends enabling volume autosize and scrubbing on cache volu
 +
 Workload Factory recommends enabling host-visible capacity reporting to provide better visibility into storage usage at the volume level.
 
+* *Operating System (OS) type*
++
+Workload Factory recommends ensuring that the ONTAP LUN operating system (OS) type value matches the operating system partitioning scheme to achieve I/O alignment. Incorrect configuration might reduce performance.
+
+* *Block device space management*
++ 
+Workload Factory recommends configuring block device space settings for LUNs used by database host instances to prevent write failures and improve space efficiency on FSx for ONTAP. This configuration applies to the recommended combination of settings for thin-provisioned volumes: space reservation, space allocation, and fractional reserve.
+
+* *Thin provisioning*
++
+Workload Factory recommends configuring thin provisioning for FSx for ONTAP volumes hosting database instances. This approach allows more logical data to be stored than physically available.
+
 === Cost optimization
 Cost optimization helps you get the most value for your business while keeping costs low.
 
@@ -100,10 +112,6 @@ An overprovisioned SSD capacity tier adds unnecessary costs. Workload Factory re
 +
 The configuration analysis identifies NAS volumes that are not actively used and recommends deleting or archiving the volumes to reduce costs.
 
-* *Thin provisioning*
-+
-Workload Factory recommends configuring thin provisioning for FSx for ONTAP volumes hosting database instances. This approach allows more logical data to be stored than physically available.
-
 === Performance efficiency
 Performance efficiency helps you ensure that your storage resources are used effectively and that workloads perform optimally.
 
@@ -114,11 +122,3 @@ Workload Factory recommends rebalancing your FlexGroup volumes to improve effici
 * *FlexVol volumes rebalance*
 +
 Workload Factory recommends rebalancing your FlexVol volumes to improve efficiency. After scaling out, capacity and workload activity can become uneven across the volume. 
-
-* *Operating System (OS) type*
-+
-Workload Factory recommends ensuring that the ONTAP LUN operating system (OS) type value matches the operating system partitioning scheme to achieve I/O alignment. Incorrect configuration might reduce performance.
-
-* *Block device space management*
-+ 
-Workload Factory recommends configuring block device space settings for LUNs used by database host instances to prevent write failures and improve space efficiency on FSx for ONTAP. This configuration applies to the recommended combination of settings for thin-provisioned volumes: space reservation, space allocation, and fractional reserve.
