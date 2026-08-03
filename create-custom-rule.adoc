@@ -15,16 +15,18 @@ summary: Create a custom architectural rule using natural language to enforce yo
 [.lead]
 Create custom rules by describing them in plain language. The AI rule builder turns your request into a validated rule that checks your FSx for ONTAP resources.
 
+.About this task
+
+The rule creation process walks you through the steps: defining the rule, reviewing how the AI interpreted it, and checking the results before scheduling regular evaluations. You stay in control at every step. The system suggests a rule based on your prompt, but nothing moves forward until you confirm it.
+
+NOTE: If your account admin has turned off AI features, you'll see a message and won't be able to create custom rules. Contact your administrator or link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html[learn about AI administration^].
+
 .Before you begin
 
 * You have configured AWS credentials with read-only access.
 * You have ONTAP credentials with viewer permissions.
 * You have a link or agent configured for FSx for ONTAP connectivity.
 * You understand that custom rule creation uses NetApp's Bedrock AI service.
-
-.About this task
-
-The rule creation process walks you through the steps: defining the rule, reviewing how the AI interpreted it, and checking the results before scheduling regular evaluations. You stay in control at every step. The system suggests a rule based on your prompt, but nothing moves forward until you confirm it.
 
 == Create a rule
 
