@@ -79,4 +79,4 @@ Enable cold data tiering to move cold data from the SSD storage tier to lower-co
 
 .What's next
 
-link:improve-configurations-cvo.html[Implement well-architected Cloud Volumes ONTAP system configurations]
+link:https://docs.netapp.com/us-en/console-well-architected/cvo/improve-configurations-cvo.html[Implement well-architected Cloud Volumes ONTAP system configurations]
