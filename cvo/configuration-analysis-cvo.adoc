@@ -18,7 +18,7 @@ Key capabilities include:
 * Proactive observability
 * Insights to action
 
-include::.._include/well-architected-workloads.adoc[]
+include::../_include/well-architected-workloads.adoc[]
 
 == Analysis requirements
 For a complete Cloud Volumes ONTAP system analysis, you must link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[deploy a NetApp Console agent^] to set up connectivity between your systems and the NetApp Console.
