@@ -64,7 +64,7 @@ Stop a configuration analysis for a Cloud Volumes ONTAP system or for selected v
 [role="tabbed-block"]
 ====
 
-.Dismiss a configuration analysis for a file system
+.Dismiss a configuration analysis for a system
 --
 
 .Steps
@@ -93,7 +93,7 @@ Stop a configuration analysis for a Cloud Volumes ONTAP system or for selected v
 ====
 
 .Result
-The configuration analysis stops for the file system or selected volumes. 
+The configuration analysis stops for the system or selected volumes. 
 
 You can reactivate the analysis at any time.
 
@@ -104,7 +104,7 @@ Reactivate a dismissed configuration analysis for a Cloud Volumes ONTAP system a
 [role="tabbed-block"]
 ====
 
-.Reactivate a configuration analysis for a file system
+.Reactivate a configuration analysis for a system
 --
 .Steps
 . Log in to the link:https://console.netapp.com/home[NetApp Console^].
