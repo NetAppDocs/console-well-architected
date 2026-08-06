@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: gcnv/configuration-analysis-gcnv.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
-summary: "NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues."  
+summary: "NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues."  
 ---
 = Configuration analysis for Google Cloud NetApp Volumes
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues. When issues are found, NetApp Console shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
+NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, NetApp Console shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
@@ -97,10 +97,6 @@ For optimal performance, Workload Factory recommends the cache relationship writ
 * *Optimize cache volume size*
 +
 Workload Factory recommends enabling volume autosize and scrubbing on cache volumes to maintain optimal size and focus the cache on hot data for peak efficiency.
-
-* *ONTAP version compliance*
-+
-Upgrade to the latest ONTAP version for full compatibility, support, and access to new features. 
 
 === Cost optimization
 Cost optimization helps you get the most value for your business while keeping costs low.
