@@ -1,0 +1,70 @@
+=== Updated configuration names for FSx for ONTAP in the well-architected dashboard
+The well-architected dashboard in NetApp Console now features updated storage configuration names for FSx for ONTAP to improve clarity and consistency. 
+
+The following table lists the old configuration names and their corresponding new configuration names in the well-architected dashboard.
+
+[cols="1,1", options="header"]
+|===
+|Old configuration name
+|New configuration name
+
+|Schedule volumes backups
+|Volume backups
+
+|SSD capacity threshold
+|SSD capacity headroom
+
+|File capacity threshold
+|File capacity headroom
+
+|Long-term retention data reliability
+|Replication policy labels
+
+|Scheduled local snapshots
+|Snapshot policy
+
+|Delete unnecessary backups
+|Backup expiration
+
+|Delete unnecessary snapshots
+|Snapshot expiration    
+
+|Underutilized SSD capacity
+|Overprovisioned SSD capacity
+
+|Inactive block devices
+|Inactive block devices (LUN)
+
+|Optimize TCO by tiering cold data
+|Cold data tiering
+
+|Volume logical capacity reporting
+|Host-visible capacity reporting
+
+|FlexGroup volumes rebalance
+|Rebalance FlexGroup volumes
+
+|FlexVol volumes rebalance
+|Rebalance FlexVol volumes
+
+|Cache relationship write mode
+|FlexCache write mode
+
+|Optimize cache volume size
+|FlexCache replica size
+
+|Unauthorized access to volume
+|Unauthorized iSCSI volume access
+
+|ARP/AI disabled
+|Ransomware protection (ARP/AI)
+|===
+
+=== Fix, dismiss, and reactivate configurations for Cloud Volumes ONTAP in Microsoft Azure
+The well-architected dashboard in NetApp Console now allows you to fix configuration recommendations for your Cloud Volumes ONTAP systems. 
+
+You can also dismiss one or more configurations from the well-architected analysis. This allows you to ignore specific configurations that don't apply to your environment. 
+
+If you want to include a dismissed configuration later, you can reactivate it in the well-architected dashboard. This restores the configuration to the analysis and allows you to get recommendations and fixes for it.
+
+link:https://docs.netapp.com/us-en/console-well-architected/cvo/\improve-configurations-cvo.html[Fix, dismiss, and reactivate configurations for Cloud Volumes ONTAP in Microsoft Azure]

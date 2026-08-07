@@ -114,7 +114,7 @@ Failed:: The evaluation did not finish. Common causes include AWS credential err
 If a rule keeps failing or only partly succeeds, check that:
 
 * AWS credentials have read-only access to all resources.
-* Link and agent are configured for all file systems in scope.
+* Link and Console agent are configured for all file systems in scope.
 * The FSx for ONTAP viewer user has appropriate permissions.
 
 == What to do next

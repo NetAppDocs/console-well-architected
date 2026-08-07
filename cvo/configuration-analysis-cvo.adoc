@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: cvo/configuration-analysis-cvo.html
 keywords: Cloud Volumes ONTAP, configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
-summary: "NetApp Console analyzes storage system configurations daily to determine if there are any configuration issues."  
+summary: "The well-architected dashboard in NetApp Console analyzes Cloud Volumes ONTAP system configurations daily to determine if there are any configuration issues."  
 ---
 = Configuration analysis for Cloud Volumes ONTAP
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, the Console shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
+The well-architected dashboard in NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues with your Cloud Volumes ONTAP systems. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
@@ -18,26 +18,27 @@ Key capabilities include:
 * Proactive observability
 * Insights to action
 
+include::../_include/well-architected-workloads.adoc[]
+
 == Analysis requirements
-For a complete Cloud Volumes ONTAP system analysis, you must link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[deploy a NetApp Console agent^]. Console agent connectivity lets the Console analyze all Cloud Volumes ONTAP system configurations like data protection and performance.
+For a complete Cloud Volumes ONTAP system analysis, you must link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[deploy a NetApp Console agent^] to set up connectivity between your systems and the NetApp Console.
 
 == Best practices and recommendations for Cloud Volumes ONTAP systems
 
-NetApp assesses storage configurations to provide an in-depth view of ONTAP configuration best practices and for compliance with the Azure Well-Architected Framework. The assessment also recommends improvements and fixes.  
+The well-architected dashboard assesses storage configurations to provide an in-depth view of ONTAP configuration best practices and for compliance with the Azure Well-Architected Framework. The assessment also recommends improvements and fixes.  
 
 The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, _security_, _operational excellence_, _cost optimization_, and _performance efficiency_.
 
 === Reliability 
-Reliability ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. 
+Reliability ensures that workloads perform their intended functions correctly and consistently, even during disruptions. 
 
-* *Schedule local snapshots*
+* *Snapshot policy*
 +
 Schedule local snapshots for efficient backup and quick restores. Snapshots are instant, point-in-time images of your volumes. 
 
-* *SSD capacity threshold*
+* *SSD capacity headroom*
 +
-The SSD storage tier capacity should not exceed 80% utilization on an ongoing basis. Exceeding this threshold can degrade throughput and cause data volumes to become read-only, causing write operations to fail.
-
+The SSD storage tier capacity should not exceed 80% utilization. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your system. When capacity runs out, data volumes become read-only. Services trying to write new data also fail.
 
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
@@ -49,17 +50,17 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) helps enhance cyber res
 === Operational excellence
 Operational excellence focuses on delivering the best architecture and business value. 
 
-* *Volume capacity utilization threshold*
+* *Volume capacity headroom*
 +
-NetApp recommends that volume capacity doesn't exceed 80% utilization on an ongoing basis. This might impact data reads and writes to your application. Volume capacity increases can be manual or automatic using the volume autogrow feature. 
+We recommend that volume capacity doesn't exceed 80% utilization. This might impact data reads and writes to your application. Volume capacity increases can be manual or automatic using the volume autogrow feature. 
 
-* *Cache relationship write mode*
+* *FlexCache write mode*
 +
-For optimal performance, NetApp recommends the cache relationship write mode that best suits your workload. Write-around mode provides better performance for read-heavy workloads with small files, whereas write-back mode provides better performance for write-heavy workloads with large files.
+For optimal performance, we recommend the FlexCache write mode that best suits your workload. Write-around mode provides better performance for read-heavy workloads with small files, while write-back mode provides better performance for write-heavy workloads with large files.
 
-* *ONTAP cache volume size*
+* *FlexCache replica size*
 +
-NetApp recommends enabling volume autosize and scrubbing on cache volumes to maintain optimal size and focus the cache on frequently accessed (hot) data for peak efficiency.
+We recommend enabling volume autosize and scrubbing on cache volumes to maintain optimal size and focus the cache on frequently accessed (hot) data for peak efficiency.
 
 * *ONTAP version compliance*
 +
@@ -68,14 +69,14 @@ Upgrade to the latest ONTAP version for full compatibility, support, and access 
 === Cost optimization
 Cost optimization helps you get the most value for your business while keeping costs low.
 
-* *Identify underutilized SSD capacity*
+* *Overprovisioned SSD capacity*
 +
-An underutilized SSD capacity tier might be incurring unnecessary costs. NetApp recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and the system does not support other file system operations during this time.
+An overprovisioned SSD capacity tier adds unnecessary costs. We recommend reducing the SSD tier capacity while maintaining a 20% free space buffer. A decrease operation takes several hours to several days, and other file system operations are unsupported during this time.
 
-* *Data tiering policy*
+* *Cold data tiering*
 +
-Enable cold data tiering to move cold data from the SSD storage tier to lower-cost storage. Azure Blob Storage serves as the capacity tier for inactive data.
+Enable cold data tiering to move cold data from the SSD storage tier to lower-cost storage. We recommend applying a tiering policy to every volume. Azure Blob Storage serves as the capacity tier for inactive data.
 
 .What's next
 
-link:cvo/improve-configurations-cvo.html[Implement well-architected Cloud Volumes ONTAP system configurations]
+link:https://docs.netapp.com/us-en/console-well-architected/cvo/improve-configurations-cvo.html[Implement well-architected Cloud Volumes ONTAP system configurations]
