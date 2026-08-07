@@ -21,7 +21,7 @@ Key capabilities include:
 == Analysis requirements
 For a complete storage pool analysis, you must do the following: 
 
-* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[Deploy a NetApp Console agent^] or link:https://docs.netapp.com/us-en/workload-gcnv/create-link.html[associate a link^]. Console agent and link connectivity let NetApp Console analyze all storage pool configurations like data protection and performance.
+* link:https://docs.netapp.com/us-en/storage-management-google-cloud-netapp-volumes/task-create-system.html[Add your Google Cloud NetApp Volumes system to NetApp Console^].
 
 * Grant _view, planning, and analysis_ permissions in your Google Cloud account. 
 +
@@ -29,7 +29,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Lea
 
 == Best practices and recommendations for storage workloads
 
-Workload Factory assesses storage configurations against ONTAP best practices and the Google Cloud Well-Architected Framework. The assessment also recommends improvements and fixes.  
+Workload Factory assesses storage configurations against storage and ONTAP best practices and the Google Cloud Well-Architected Framework. The assessment also recommends improvements and fixes.  
 
 The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, _security_, _operational excellence_, _cost optimization_, and _performance efficiency_.
 
