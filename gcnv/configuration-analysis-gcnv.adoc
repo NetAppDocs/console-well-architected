@@ -31,90 +31,25 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Lea
 
 Workload Factory assesses storage configurations against storage and ONTAP best practices and the Google Cloud Well-Architected Framework. The assessment also recommends improvements and fixes.  
 
-The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, _security_, _operational excellence_, _cost optimization_, and _performance efficiency_.
+The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, and _operational excellence_.
 
 === Reliability 
 Reliability ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. 
- 
-* *Volume backups*
-+
-Workload Factory recommends backing up your volumes. If you need a remote backup and don’t already have one, these volumes might not meet retention or compliance requirements. If another backup solution already covers this, you can dismiss this recommendation in the dashboard. Apply fixes to many items at once within one file system. You can dismiss it for one or more file systems and reactivate it later if needed.
 
 * *Snapshot policy*
 +
 Schedule local snapshots for efficient backup and quick restores. Snapshots are instant, point-in-time images of your volumes. 
 
-* *Cross-region replication*
-+
-Cross-region replication ensures that your data is replicated to another Google Cloud region, providing enhanced data durability and availability. Workload Factory recommends setting up cross-region replication to help with disaster recovery and compliance. 
-
-* *Set up data replication*
-+
-To extend data reliability, data can be replicated to a Google Cloud NetApp Volumes storage pool in the same region or in another region. Set up data replication to support migration, disaster recovery, and long-term retention across storage pools. 
-
 * *SSD capacity headroom*
 +
-Workload Factory recommends keeping SSD tier usage at 80% or less. Some workloads may require additional capacity headroom and lower utilization targets. As usage exceeds the recommended headroom, the risk of performance slowdowns and service issues increases—especially if capacity isn't expanded in time. Bulk fixes aren't available for this configuration. You can dismiss it for one or more file system and reactivate it later if needed.
-
-* *Replication policy labels*
-+
-The snapshot policy labels of the source volume and the replication policy labels must match to ensure data reliability. 
-
-* *File object capacity* 
-+
-Workload Factory recommends increasing the volume capacity limit. A volume can run out of file objects (inodes) before it runs out of space, especially when storing many small files. When this happens, new writes can fail even if free capacity is still available. Apply fixes across multiple file systems at once. You can dismiss it for one or more volumes and reactivate it later if needed. 
-
-=== Security 
-Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
-
-* *Ransomware protection (ARP/AI)* 
-+
-Workload Factory recommends enabling NetApp Autonomous Ransomware Protection with AI (ARP/AI) on all volumes for stronger ransomware protection. ONTAP can detect unusual write activity and automatically create a recovery snapshot. If ARP/AI isn’t enabled everywhere, some volumes might have less protection when you need it most. Apply fixes across multiple file systems at once. You can dismiss it for one or more volumes and reactivate it later if needed.
-
-* *Unauthorized iSCSI volume access*
-+
-Workload Factory recommends turning off NAS access for this volume. If the volume is meant for iSCSI only, NFS access might still be enabled through export policies. If you don’t need NFS, disabling it reduces your security risk. Apply fixes across multiple file systems at once. You can dismiss it for one or more volumes and reactivate it later if needed.
+Workload Factory recommends keeping SSD tier usage at 80% or less. Some workloads may require additional capacity headroom and lower utilization targets. As usage exceeds the recommended headroom, the risk of performance slowdowns and service issues increases—especially if capacity isn't expanded in time. Bulk fixes aren't available for this configuration. You can dismiss it for one or more storage pools and reactivate it later if needed.
 
 === Operational excellence
 Operational excellence focuses on delivering the most optimal architecture and business value. 
 
-* *Automatic capacity management* 
-+
-Workload Factory recommends enabling automatic capacity management to keep your SSD performance tier within its limit. Without it, capacity can run out before you notice, or expand too slowly to keep up. Since adding capacity can take hours and can’t be repeated during that time, performance might be impacted longer—especially during fast growth like data migrations. Apply fixes across multiple file systems at once. You can dismiss it for one or more file system and reactivate it later if needed. 
-
 * *Volume capacity headroom*
 +
-Workload Factory recommends keeping volume usage under 80% to reduce the risk of running out of space. If a volume grows faster than expected, you might need to expand it quickly. This can increase the risk of application impact, especially with sudden or spiky growth. This risk is lower when you use thin provisioning and automatic capacity management. Bulk fixes aren’t available for this configuration. You can dismiss it for one or more volumes and reactivate it later if needed. 
-
-* *Volume utilization nearing full*
-+
-When a volume is nearing full capacity, Workload Factory recommends taking action to increase the volume capacity to avoid potential application disruptions.
-
-* *FlexCache write mode*
-+
-Workload Factory recommends updating the cache write mode. The write mode affects write performance. If it doesn’t match how your workload actually writes data, you might not get the full benefit of the cache. Apply fixes across multiple file systems at once. You can dismiss it for one or more cache relationships and reactivate it later if needed.
-
-* *FlexCache replica size*
-+
-Workload Factory recommends turning on volume autosize and scrubbing to keep your cache sized correctly and focused on frequently used data. If the cache is too small, more reads go back to the source. If it’s too large, it uses capacity without enough benefit. Right-size the cache to improve read performance without wasting space. Bulk fixes aren’t available for this configuration. You can dismiss it for one or more volumes and reactivate it later if needed.
-
-=== Cost optimization
-Cost optimization helps you get the most value for your business while keeping costs low.
-
-* *Overprovisioned SSD capacity*
-+
-Workload Factory recommends reducing SSD capacity to lower costs if you don’t expect growth or migration soon. On Gen 2 file systems, you can reduce SSD capacity later if your needs change. Dismiss this recommendation if you’re keeping extra capacity for planned growth. Bulk fixes aren’t available for this configuration. You can dismiss it for one or more file systems and reactivate it later if needed.
-
-* *Cold data tiering*
-+
-Workload Factory recommends cold data tiering to reduce SSD usage and lower costs. The suggested tiering policy and cooling period depend on your workload and performance needs. Apply fixes across multiple file systems at once. You can dismiss it for one or more volumes and reactivate it later if needed.
-
-=== Performance efficiency
-Performance efficiency focuses on optimizing resource allocation and maintaining performance at scale.
-
-* *Storage pool throughput optimization*
-+
-Ensure your storage pool throughput is appropriately sized for your workload demands. Workload Factory recommends monitoring throughput utilization and adjusting as needed to maintain optimal performance.
+Workload Factory recommends keeping volume usage under 80% to reduce the risk of running out of space. If a volume grows faster than expected, you might need to expand it quickly. This can increase the risk of application impact, especially with sudden or spiky growth. This risk is lower when you use thin provisioning and automatic capacity management. Bulk fixes aren't available for this configuration. You can dismiss it for one or more volumes and reactivate it later if needed. 
 
 .What's next
 
