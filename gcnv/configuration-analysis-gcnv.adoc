@@ -9,7 +9,7 @@ summary: "NetApp Console analyzes storage system configurations regularly to det
 :imagesdir: ../media/
 
 [.lead]
-NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, NetApp Console shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
+The well-architected dashboard in NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices.
 
 Key capabilities include: 
 
@@ -36,11 +36,11 @@ The well-architected analysis categorizes configurations in the following pillar
 === Reliability 
 Reliability ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. 
  
-* *Schedule volume backups*
+* *Volume backups*
 +
-Backing up your volumes helps support data retention and compliance needs. Use volume backups to set up automated backups and retention for your data.
+Workload Factory recommends backing up your volumes. If you need a remote backup and don’t already have one, these volumes might not meet retention or compliance requirements. If another backup solution already covers this, you can dismiss this recommendation in the dashboard. Apply fixes to many items at once within one file system. You can dismiss it for one or more file systems and reactivate it later if needed.
 
-* *Schedule local snapshots*
+* *Snapshot policy*
 +
 Schedule local snapshots for efficient backup and quick restores. Snapshots are instant, point-in-time images of your volumes. 
 
@@ -52,62 +52,62 @@ Cross-region replication ensures that your data is replicated to another Google 
 +
 To extend data reliability, data can be replicated to a Google Cloud NetApp Volumes storage pool in the same region or in another region. Set up data replication to support migration, disaster recovery, and long-term retention across storage pools. 
 
-* *Increase SSD capacity threshold*
+* *SSD capacity headroom*
 +
-The SSD storage tier capacity should not exceed 80% utilization. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your storage pool. Running out of capacity causes data volumes to become read-only. Services trying to write new data also fail.
+Workload Factory recommends keeping SSD tier usage at 80% or less. Some workloads may require additional capacity headroom and lower utilization targets. As usage exceeds the recommended headroom, the risk of performance slowdowns and service issues increases—especially if capacity isn't expanded in time. Bulk fixes aren't available for this configuration. You can dismiss it for one or more file system and reactivate it later if needed.
 
-* *Match labels to ensure data reliability*
+* *Replication policy labels*
 +
 The snapshot policy labels of the source volume and the replication policy labels must match to ensure data reliability. 
 
-* *Increase file capacity threshold* 
+* *File object capacity* 
 +
-The file capacity threshold should be raised to avoid hitting the volume capacity limit. Low file capacity (inodes) prevents writing additional data to the volume. Workload Factory recommends maintaining file capacity utilization below 80%. Available file capacity is required to create new files in the volume. 
+Workload Factory recommends increasing the volume capacity limit. A volume can run out of file objects (inodes) before it runs out of space, especially when storing many small files. When this happens, new writes can fail even if free capacity is still available. Apply fixes across multiple file systems at once. You can dismiss it for one or more volumes and reactivate it later if needed. 
 
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
 
-* *Enable ARP/AI* 
+* *Ransomware protection (ARP/AI)* 
 +
-NetApp Autonomous Ransomware Protection with AI (ARP/AI) helps protect your volumes from ransomware threats. Workload Factory recommends enabling ARP/AI for all volumes.
+Workload Factory recommends enabling NetApp Autonomous Ransomware Protection with AI (ARP/AI) on all volumes for stronger ransomware protection. ONTAP can detect unusual write activity and automatically create a recovery snapshot. If ARP/AI isn’t enabled everywhere, some volumes might have less protection when you need it most. Apply fixes across multiple file systems at once. You can dismiss it for one or more volumes and reactivate it later if needed.
 
-* *Unauthorized access to volumes*
+* *Unauthorized iSCSI volume access*
 +
-Volumes serving application data using iSCSI should not allow NAS access at the same time. Workload Factory recommends restricting iSCSI volumes from using any other protocol.
+Workload Factory recommends turning off NAS access for this volume. If the volume is meant for iSCSI only, NFS access might still be enabled through export policies. If you don’t need NFS, disabling it reduces your security risk. Apply fixes across multiple file systems at once. You can dismiss it for one or more volumes and reactivate it later if needed.
 
 === Operational excellence
 Operational excellence focuses on delivering the most optimal architecture and business value. 
 
-* *Enable automatic capacity management* 
+* *Automatic capacity management* 
 +
-Automatic capacity management should be enabled to regularly ensure that the SSD tier doesn't exceed the threshold. 
+Workload Factory recommends enabling automatic capacity management to keep your SSD performance tier within its limit. Without it, capacity can run out before you notice, or expand too slowly to keep up. Since adding capacity can take hours and can’t be repeated during that time, performance might be impacted longer—especially during fast growth like data migrations. Apply fixes across multiple file systems at once. You can dismiss it for one or more file system and reactivate it later if needed. 
 
-* *Volume capacity utilization threshold*
+* *Volume capacity headroom*
 +
-Workload Factory recommends that volume capacity doesn't exceed 80% utilization on an ongoing basis. This might impact data reads and writes to your application. Volume capacity increases can be manual or automatic using the volume autogrow feature. 
+Workload Factory recommends keeping volume usage under 80% to reduce the risk of running out of space. If a volume grows faster than expected, you might need to expand it quickly. This can increase the risk of application impact, especially with sudden or spiky growth. This risk is lower when you use thin provisioning and automatic capacity management. Bulk fixes aren’t available for this configuration. You can dismiss it for one or more volumes and reactivate it later if needed. 
 
 * *Volume utilization nearing full*
 +
 When a volume is nearing full capacity, Workload Factory recommends taking action to increase the volume capacity to avoid potential application disruptions.
 
-* *Cache relationship write mode*
+* *FlexCache write mode*
 +
-For optimal performance, Workload Factory recommends the cache relationship write mode that best suits your workload. Write-around mode provides better performance for read-heavy workloads with small files, whereas write-back mode provides better performance for write-heavy workloads with large files.
+Workload Factory recommends updating the cache write mode. The write mode affects write performance. If it doesn’t match how your workload actually writes data, you might not get the full benefit of the cache. Apply fixes across multiple file systems at once. You can dismiss it for one or more cache relationships and reactivate it later if needed.
 
-* *Optimize cache volume size*
+* *FlexCache replica size*
 +
-Workload Factory recommends enabling volume autosize and scrubbing on cache volumes to maintain optimal size and focus the cache on hot data for peak efficiency.
+Workload Factory recommends turning on volume autosize and scrubbing to keep your cache sized correctly and focused on frequently used data. If the cache is too small, more reads go back to the source. If it’s too large, it uses capacity without enough benefit. Right-size the cache to improve read performance without wasting space. Bulk fixes aren’t available for this configuration. You can dismiss it for one or more volumes and reactivate it later if needed.
 
 === Cost optimization
 Cost optimization helps you get the most value for your business while keeping costs low.
 
-* *Identify underutilized SSD capacity*
+* *Overprovisioned SSD capacity*
 +
-An underutilized SSD capacity tier might be incurring unnecessary costs. Workload Factory recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and the storage pool does not support other operations during this time.
+Workload Factory recommends reducing SSD capacity to lower costs if you don’t expect growth or migration soon. On Gen 2 file systems, you can reduce SSD capacity later if your needs change. Dismiss this recommendation if you’re keeping extra capacity for planned growth. Bulk fixes aren’t available for this configuration. You can dismiss it for one or more file systems and reactivate it later if needed.
 
-* *Data tiering policy*
+* *Cold data tiering*
 +
-Enable cold data tiering to move cold data from the SSD storage tier to lower-cost storage. Google Cloud Storage serves as the capacity tier for inactive data.
+Workload Factory recommends cold data tiering to reduce SSD usage and lower costs. The suggested tiering policy and cooling period depend on your workload and performance needs. Apply fixes across multiple file systems at once. You can dismiss it for one or more volumes and reactivate it later if needed.
 
 === Performance efficiency
 Performance efficiency focuses on optimizing resource allocation and maintaining performance at scale.

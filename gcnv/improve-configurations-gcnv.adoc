@@ -47,17 +47,16 @@ The remediation process can cause instance downtimes or service interruptions. R
 
 
 .Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.  
-. Select *View issues* for any configuration. Make sure you review the recommendation carefully. 
-+ 
-The recommendation explains best practices and potential pitfalls of unoptimized configurations.
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration.
++
+Make sure you review the recommendation carefully. The recommendation explains best practices and potential pitfalls of unoptimized configurations.
 . Select to *Fix*.
 +
 When *View and fix* is an option, select the impacted volumes to fix. 
 . Review the summary and action items that appear in the dialog to learn what happens if you fix the issue. Some operations can cause instance downtimes or service interruptions. 
-. Select *Continue* to fix the configuration issue. 
+. Select *Continue* to fix the configuration issue.  
 
 .Result
 Workload Factory starts the process to fix the issue. Select the account settings menu and then select *Tracker* to view the status of the operation.
@@ -72,12 +71,9 @@ Stop a configuration analysis for a Google Cloud NetApp Volumes storage pool or 
 --
 
 .Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.  
-. Select *View issues* for any configuration. Make sure you review the recommendation carefully. 
-+ 
-The recommendation explains best practices and potential pitfalls of unoptimized configurations.
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration. 
 . Under Configurations, identify the configuration that doesn't apply to your environment and then select *Dismiss*.  
 . In the Dismiss configuration dialog, select *Dismiss* to stop the configuration analysis.
 --
@@ -86,9 +82,9 @@ The recommendation explains best practices and potential pitfalls of unoptimized
 --
 
 .Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.   
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration.  
 . Under Configurations, identify the configuration to dismiss for selected volumes and then select *View and fix*. 
 . Identify the volumes to dismiss from the configuration analysis. 
 +
@@ -114,9 +110,8 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 .Reactivate a configuration analysis for a storage pool
 --
 .Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.   
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.   
 . Select *Dismissed configurations*. 
 . Identify the configuration you want to reactivate and select *Reactivate*.  
 
@@ -124,19 +119,15 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 .Reactivate a configuration analysis for a volume
 --
 .Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.   
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
 . Select *Dismissed configurations*. 
-. Under Configurations, identify the configuration to reactivate for selected volumes and select *View and fix*. 
-. Identify the volumes to reactivate. 
-+
+. Identify the volume(s) to reactivate from the configuration analysis. 
+
 * For one volume: select the actions menu and then select *Reactivate volume*.
 * For multiple volumes: select the volumes and then select *Reactivate* next to Bulk action.
-. Select *Reactivate* to restart the analysis for the configuration.
-. In the Reactivate volumes dialog, select *Reactivate* to confirm.
 --
 ====
 
 .Result
-The configuration analysis restarts for the storage pool or selected volumes.
+The system reactivates the configuration analysis. A new analysis occurs daily.
