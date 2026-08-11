@@ -35,7 +35,7 @@ Root-level `.adoc` files cover the dashboard overview, custom rules (learning, c
 - *FlexGroup* and *FlexVol*: ONTAP volume types that may require periodic rebalancing
 
 **Supported storage systems:**
-- *Amazon FSx for NetApp ONTAP* (AWS) – requires link or Console agent for connectivity, and AWS credentials with appropriate permissions
+- *Amazon FSx for NetApp ONTAP* (AWS) – requires AWS credentials with appropriate permissions; link or Console agent is optional but provides a comprehensive analysis
 - *Cloud Volumes ONTAP on Microsoft Azure* – requires a Console agent; Azure Blob Storage serves as the capacity tier for cold data
 
 **Naming conventions and terminology:**
