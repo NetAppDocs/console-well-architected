@@ -1,7 +1,7 @@
 ## Copilot instructions for Well-Architected dashboard documentation
 
 ### Repository overview
-Product: Well-Architected dashboard in NetApp Console
+Product: Well-architected dashboard in NetApp Console
 
 The well-architected dashboard in NetApp Console performs daily automated scans of cloud storage system configurations, evaluating them against best practices across five pillars—reliability, security, operational excellence, cost optimization, and performance efficiency—and providing insights, recommendations, and automated remediation.
 
