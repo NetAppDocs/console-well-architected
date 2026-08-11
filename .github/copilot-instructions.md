@@ -30,7 +30,7 @@ Root-level `.adoc` files cover the dashboard overview, custom rules (learning, c
 - *Dismiss*: the action to exclude a specific configuration (or individual volumes) from scoring and alerts; dismissed configurations can be reactivated
 - *Custom rules*: user-defined rules written in plain language, translated by AI into structured rule logic, and evaluated on a schedule against FSx for ONTAP resources
 - *Dry run*: a one-time test evaluation of a custom rule to preview affected resources before scheduling
-- *ARP/AI* (*Autonomous Ransomware Protection with AI*): a NetApp security feature recommended for all volumes to detect ransomware threats
+- *NetApp Autonomous Ransomware Protection with AI* (*ARP/AI*): a NetApp security feature recommended for all volumes to detect ransomware threats
 - *FlexCache*: ONTAP caching technology; write-around mode suits read-heavy workloads, write-back mode suits write-heavy workloads
 - *FlexGroup* and *FlexVol*: ONTAP volume types that may require periodic rebalancing
 
