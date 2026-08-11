@@ -39,7 +39,7 @@ Root-level `.adoc` files cover the dashboard overview, custom rules (learning, c
 - *Cloud Volumes ONTAP on Microsoft Azure* – requires a Console agent; Azure Blob Storage serves as the capacity tier for cold data
 
 **Naming conventions and terminology:**
-- Use *well-architected dashboard* (lowercase) when referring to the feature, not "Well-Architected Dashboard"
+- Use sentence case for *well-architected dashboard* when referring to the feature, not "Well-Architected Dashboard"
 - Use *NetApp Console* when referring to the platform, not "Console" alone on first mention
 - Use *link* (not "connector" or "gateway") for the FSx for ONTAP connectivity component
 - Use *Console agent* when referring to the deployable agent component
