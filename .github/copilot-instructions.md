@@ -57,7 +57,7 @@ Root-level `.adoc` files cover the dashboard overview, custom rules (learning, c
 
 ### Typical user workflows
 
-**Analyze and fix FSx for ONTAP configurations:** Sign in to NetApp Console → Navigate to Workloads > Well-architected → Review optimization score and configuration issues → Select *View* for a configuration → Select *Fix* (or *View and fix* for volume-level fixes) → Confirm and continue → Monitor via Tracker
+**Analyze and fix FSx for ONTAP configurations:** Sign in to NetApp Console → Navigate to Workloads > Well-architected → Review configuration issues → Select *View* for a configuration → Select *Fix* (or *View and fix* for volume-level fixes) → Confirm and continue → Monitor via Tracker
 
 **Analyze and fix Cloud Volumes ONTAP configurations:** Sign in to NetApp Console → Navigate to Workloads > Well-architected → Review configuration issues → Select *View* for a configuration → Download CSV (optional) → Select *Fix* → Confirm and continue → Monitor via Tracker
 
