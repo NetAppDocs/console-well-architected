@@ -21,7 +21,6 @@ Root-level `.adoc` files cover the dashboard overview, custom rules (learning, c
 - *NetApp Console agent* or a *link* provides connectivity between storage systems and NetApp Console; both are required for comprehensive analysis
 - *Workload Factory* is the underlying engine referenced for remediation actions and tracker operations
 - *Rule builder* is the AI-guided interface for creating custom rules; it uses NetApp's Bedrock AI service and requires AI features to be enabled by the account administrator
-- *Rules catalog* is the management interface for viewing, pausing, deleting, and running custom rules
 
 **Key concepts:**
 - *Well-architected pillars*: reliability, security, operational excellence, cost optimization, and performance efficiency—used to categorize all configuration findings
