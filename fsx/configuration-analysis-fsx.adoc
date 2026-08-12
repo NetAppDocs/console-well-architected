@@ -4,7 +4,7 @@ permalink: fsx/configuration-analysis-fsx.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
 summary: "The well-architected dashboard analyzes FSx for ONTAP file system configurations regularly to determine if any there are any configuration issues."  
 ---
-= Configuration analysis for Amazon FSx for NetApp ONTAP
+= Configuration analysis for FSx for ONTAP in NetApp Console
 :icons: font
 :imagesdir: ../media/
 

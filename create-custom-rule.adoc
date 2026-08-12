@@ -5,7 +5,7 @@ keywords: create custom rule, byor, custom rules, fsx, ontap, well architected, 
 summary: Create a custom architectural rule using natural language to enforce your organizational standards for FSx for ONTAP.
 ---
 
-= Create a custom rule
+= Create a custom rule for FSx for ONTAP in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
