@@ -27,7 +27,7 @@ Root-level `.adoc` files cover the dashboard overview, custom rules (learning, c
 - *Configuration analysis*: the daily automated scan of storage configurations that produces an optimization score and a list of configuration issues with recommendations
 - *Optimized / Not optimized*: the two states a configuration can have after analysis
 - *Dismiss*: the action to exclude a specific configuration (or individual volumes) from scoring and alerts; dismissed configurations can be reactivated
-- *Custom rules*: user-defined rules written in plain language, translated by AI into structured rule logic, and evaluated on a schedule against FSx for ONTAP resources
+- *Custom rules*: let you set, check, and enforce your own architecture standards, along with NetApp best practices, in the Well-architected dashboard.
 - *Dry run*: a one-time test evaluation of a custom rule to preview affected resources before scheduling
 - *NetApp Autonomous Ransomware Protection with AI* (*ARP/AI*): a NetApp security feature recommended for all volumes to detect ransomware threats
 - *FlexCache*: ONTAP caching technology; write-around mode suits read-heavy workloads, write-back mode suits write-heavy workloads
