@@ -46,14 +46,6 @@ Root-level `.adoc` files cover the dashboard overview, custom rules (learning, c
 - Custom rule states: *Draft*, *Dry-run*, *Scheduled (Enabled)*, *Disabled*, *Deleted*
 - Execution status values: *Successful*, *Partially successful*, *Failed*
 
-**Technical constraints:**
-- Custom rules support only one resource type per rule (file system, volume, or cache)
-- Minimum custom rule evaluation interval is 1 hour
-- Custom rules provide read-only access and cannot make changes to the environment
-- Automatic fixes are not available for custom rules; remediation is manual
-- Custom rule creation requires AI features to be enabled by the account administrator
-- SSD capacity and volume capacity recommendations use an 80% utilization threshold
-
 ### Typical user workflows
 
 **Analyze and fix FSx for ONTAP configurations:** Sign in to NetApp Console → Navigate to Workloads > Well-architected → Review configuration issues → Select *View* for a configuration → Select *Fix* (or *View and fix* for volume-level fixes) → Confirm and continue → Monitor via Tracker
