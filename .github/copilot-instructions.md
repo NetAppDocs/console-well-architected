@@ -12,8 +12,6 @@ The well-architected dashboard in NetApp Console performs daily automated scans 
 - `_whatsnew/` – Release notes entries by date, included in the main what's-new page
 - `media/` – Images and screenshots used across all pages
 
-Root-level `.adoc` files cover the dashboard overview, custom rules (learning, creating, and managing), what's new, support registration, and legal notices.
-
 ### Product-specific context
 
 **Architecture and components:**
