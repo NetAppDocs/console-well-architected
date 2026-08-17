@@ -29,7 +29,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Lea
 
 == Best practices and recommendations for storage workloads
 
-Workload Factory assesses storage configurations against storage and ONTAP best practices and the Google Cloud Well-Architected Framework. The assessment also recommends improvements and fixes.  
+Workload Factory assesses storage configurations against storage and ONTAP best practices and the Google Cloud Well-Architected Framework. The assessment also recommends improvements.  
 
 The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, and _operational excellence_.
 
@@ -42,14 +42,14 @@ Schedule local snapshots for efficient backup and quick restores. Snapshots are 
 
 * *SSD capacity headroom*
 +
-Workload Factory recommends keeping SSD tier usage at 80% or less. Some workloads may require additional capacity headroom and lower utilization targets. As usage exceeds the recommended headroom, the risk of performance slowdowns and service issues increases—especially if capacity isn't expanded in time. Bulk fixes aren't available for this configuration. You can dismiss it for one or more storage pools and reactivate it later if needed.
+Workload Factory recommends keeping SSD tier usage at 80% or less. Some workloads may require additional capacity headroom and lower utilization targets. As usage exceeds the recommended headroom, the risk of performance slowdowns and service issues increases—especially if capacity isn't expanded in time. You can dismiss it for one or more storage pools and reactivate it later if needed.
 
 === Operational excellence
 Operational excellence focuses on delivering the most optimal architecture and business value. 
 
 * *Volume capacity headroom*
 +
-Workload Factory recommends keeping volume usage under 80% to reduce the risk of running out of space. If a volume grows faster than expected, you might need to expand it quickly. This can increase the risk of application impact, especially with sudden or spiky growth. This risk is lower when you use thin provisioning and automatic capacity management. Bulk fixes aren't available for this configuration. You can dismiss it for one or more volumes and reactivate it later if needed. 
+Workload Factory recommends keeping volume usage under 80% to reduce the risk of running out of space. If a volume grows faster than expected, you might need to expand it quickly. This can increase the risk of application impact, especially with sudden or spiky growth. This risk is lower when you use thin provisioning and automatic capacity management. You can dismiss it for one or more volumes and reactivate it later if needed. 
 
 .What's next
 
