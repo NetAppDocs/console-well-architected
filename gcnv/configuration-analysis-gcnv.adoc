@@ -1,0 +1,56 @@
+---
+sidebar: sidebar
+permalink: gcnv/configuration-analysis-gcnv.html
+keywords: configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
+summary: "NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues."  
+---
+= Configuration analysis for Google Cloud NetApp Volumes
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The well-architected dashboard in NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices.
+
+Key capabilities include: 
+
+* Daily configuration analysis
+* Automatic best practice validations for NetApp ONTAP storage systems and partner storage providers
+* Proactive observability
+* Insights to action
+
+== Analysis requirements
+For a complete storage pool analysis, you must do the following: 
+
+* link:https://docs.netapp.com/us-en/storage-management-google-cloud-netapp-volumes/task-create-system.html[Add your Google Cloud NetApp Volumes system to NetApp Console^].
+
+* Grant _view, planning, and analysis_ permissions in your Google Cloud account. 
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to a Google Cloud account^]
+
+== Best practices and recommendations for storage workloads
+
+Workload Factory assesses storage configurations against storage and ONTAP best practices and the Google Cloud Well-Architected Framework. The assessment also recommends improvements.  
+
+The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, and _operational excellence_.
+
+=== Reliability 
+Reliability ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. 
+
+* *Snapshot policy*
++
+Schedule local snapshots for efficient backup and quick restores. Snapshots are instant, point-in-time images of your volumes. 
+
+* *SSD capacity headroom*
++
+Workload Factory recommends keeping SSD tier usage at 80% or less. Some workloads may require additional capacity headroom and lower utilization targets. As usage exceeds the recommended headroom, the risk of performance slowdowns and service issues increases—especially if capacity isn't expanded in time. You can dismiss it for one or more storage pools and reactivate it later if needed.
+
+=== Operational excellence
+Operational excellence focuses on delivering the most optimal architecture and business value. 
+
+* *Volume capacity headroom*
++
+Workload Factory recommends keeping volume usage under 80% to reduce the risk of running out of space. If a volume grows faster than expected, you might need to expand it quickly. This can increase the risk of application impact, especially with sudden or spiky growth. This risk is lower when you use thin provisioning and automatic capacity management. You can dismiss it for one or more volumes and reactivate it later if needed. 
+
+.What's next
+
+link:gcnv/improve-configurations-gcnv.html[Implement well-architected Google Cloud NetApp Volumes configurations]
