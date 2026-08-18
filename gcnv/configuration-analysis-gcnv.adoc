@@ -53,4 +53,4 @@ Workload Factory recommends keeping volume usage under 80% to reduce the risk of
 
 .What's next
 
-link:gcnv/improve-configurations-gcnv.html[Implement well-architected Google Cloud NetApp Volumes configurations]
+link:improve-configurations-gcnv.html[Implement well-architected Google Cloud NetApp Volumes configurations]
