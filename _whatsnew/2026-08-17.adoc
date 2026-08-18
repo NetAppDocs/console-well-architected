@@ -1,10 +1,10 @@
 === FSx for ONTAP support in the well-architected dashboard in NetApp Console
 The well-architected dashboard in NetApp Console is available for Amazon FSx for NetApp ONTAP. 
 
-* link:https://docs.netapp.com/us-en/console-well-architected/fsx/configuration-analysis-fsx.html[Learn about the configuration analysis for FSx for ONTAP]
+link:https://docs.netapp.com/us-en/console-well-architected/fsx/configuration-analysis-fsx.html[Learn about the configuration analysis for FSx for ONTAP]
 
-=== Updated configuration names for FSx for ONTAP in the well-architected dashboard
-The well-architected dashboard in NetApp Console now includes new storage configuration names for FSx for ONTAP. 
+=== Updated configuration names in the well-architected dashboard
+The well-architected dashboard in NetApp Console now includes new storage configuration names. 
 
 The following table lists the old configuration names and their corresponding new configuration names in the well-architected dashboard.
 
