@@ -9,7 +9,7 @@ summary: "Workload factory scans Google Cloud NetApp Volumes configurations prov
 :imagesdir: ../media/
 
 [.lead]
-Using configuration analysis insights and recommendations, leverage NetApp to implement best practices for your Google Cloud NetApp Volumes storage pools running on Google Cloud storage. You can easily review the well-architected status, learn about issues with your configurations, and get recommendations to improve the architecture of any storage pools that aren't optimized for reliability and efficiency.
+Using configuration analysis insights and recommendations, leverage NetApp to implement best practices for your Google Cloud NetApp Volumes storage pools running on Google Cloud storage. You can easily review the well-architected status, learn about issues with your configurations, and get recommendations to improve the architecture of any storage pools that aren't optimized for reliability, security, performance, and cost.
 
 link:configuration-analysis-gcnv.html[Learn about the configuration analysis and well-architected status.]
 
