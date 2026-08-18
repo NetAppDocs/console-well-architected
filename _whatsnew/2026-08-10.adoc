@@ -1,0 +1,5 @@
+=== Google Cloud NetApp Volumes support in the well-architected dashboard
+
+The NetApp Console dashboard now supports Google Cloud NetApp Volumes. Storage admins can view the status of their storage pools and configurations, get recommendations to improve efficiency, cost, performance, reliability, and security, and take action to optimize operations and follow best practices.
+
+Learn more about link:https://docs.netapp.com/us-en/console-well-architected/gcnv/configuration-analysis-gcnv.html[Configuration analysis for Google Cloud NetApp Volumes].

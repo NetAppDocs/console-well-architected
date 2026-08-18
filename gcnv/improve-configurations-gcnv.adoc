@@ -1,0 +1,105 @@
+---
+sidebar: sidebar
+permalink: gcnv/improve-configurations-gcnv.html
+keywords: improve configurations, optimize configurations, implement best practices, well-architected storage pool, Google Cloud NetApp Volumes, GCNV
+summary: "Workload factory scans Google Cloud NetApp Volumes configurations providing insights and recommendations to help you achieve operational excellence." 
+---
+= Implement well-architected Google Cloud NetApp Volumes configurations
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Using configuration analysis insights and recommendations, leverage NetApp to implement best practices for your Google Cloud NetApp Volumes storage pools running on Google Cloud storage. You can easily review the well-architected status, learn about issues with your configurations, and get recommendations to improve the architecture of any storage pools that aren't optimized for reliability, security, performance, and cost.
+
+link:configuration-analysis-gcnv.html[Learn about the configuration analysis and well-architected status.]
+
+== About this task
+NetApp analyzes Google Cloud NetApp Volumes storage pool deployments in Google Cloud daily. The daily analysis provides the well-architected status, and insights and recommendations to help you understand configuration issues so that your storage pools meet best practices. 
+
+After the daily analysis completes, the dashboard displays the total number of well-architected resources, the number of resources in a critical state, and the number of resources in a warning state. Configurations are categorized by the pillars of the well-architected framework: reliability, operational excellence, cost optimization, performance efficiency, and security. The dashboard also includes a table that lists all configurations, the well-architected status of those configurations, the severity, category, resource type (volume or storage pool), impacted resources, and the option to view the recommendation when the configuration is not optimized. 
+
+== Before you begin
+
+* You must link:https://console.netapp.com/add-working-environment/choose-type[add a Google Cloud NetApp Volumes storage pool] to NetApp Console to view the well-architected status and recommendations for configuration issues.
+
+== View recommendations for configuration issues
+You can view recommendations for configuration issues after the daily analysis completes. Recommendations explain best practices and potential risks of unoptimized configurations. You can also download a CSV file of the recommendations.
+
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration.
++
+Optionally, select image:button_download.png["A screenshot of the download icon"]to download a CSV file of the recommendations for all configurations.
+. Review the recommendation.
+
+== Dismiss a configuration analysis
+Stop a configuration analysis for a Google Cloud NetApp Volumes storage pool or for selected volumes. You can restart the analysis when needed.
+
+[role="tabbed-block"]
+====
+
+.Dismiss a configuration analysis for a storage pool
+--
+
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration. 
+. Under Configurations, identify the configuration that doesn't apply to your environment and then select *Dismiss*.  
+. In the Dismiss configuration dialog, select *Dismiss* to stop the configuration analysis.
+--
+
+.Dismiss a configuration analysis for a volume
+--
+
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. From the Well-architected dashboard, select *View* for any configuration.  
+. Under Configurations, identify the configuration to dismiss for selected volumes and then select *View*. 
+. Identify the volumes to dismiss from the configuration analysis. 
++
+* For one volume: select the actions menu and then select *Dismiss volume*.
+* For multiple volumes: select the volumes and then select *Dismiss* next to Bulk action.
+. Select *Dismiss* to stop the analysis for the configuration.
+. In the Dismiss volumes dialog, select *Dismiss* to confirm.
+--
+====
+
+.Result
+The configuration analysis stops for the storage pool or selected volumes. 
+
+You can reactivate the analysis at any time.
+
+== Reactivate a dismissed configuration analysis
+
+Reactivate a dismissed configuration analysis at any time. You can select one or more configurations to reactivate.
+
+[role="tabbed-block"]
+====
+
+.Reactivate a configuration analysis for a storage pool
+--
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.   
+. Select *Dismissed configurations*. 
+. Identify the configuration you want to reactivate and select *Reactivate*.  
+
+--
+.Reactivate a configuration analysis for a volume
+--
+.Steps
+. Log in to the link:https://console.netapp.com/home[NetApp Console^].
+. From the NetApp Console menu, select *Workloads* and then *Well-architected*.
+. Select *Dismissed configurations*. 
+. Identify the volume(s) to reactivate from the configuration analysis. 
+
+* For one volume: select the actions menu and then select *Reactivate volume*.
+* For multiple volumes: select the volumes and then select *Reactivate* next to Bulk action.
+--
+====
+
+.Result
+The system reactivates the configuration analysis. A new analysis occurs daily.
