@@ -15,6 +15,10 @@ Learn what's new with the well-architected dashboard in NetApp Console.
 
 == 17 August 2026
 
+include::_whatsnew/2026-08-17.adoc[]
+
+== 10 August 2026
+
 include::_whatsnew/2026-08-10.adoc[]
 
 == 03 August 2026
