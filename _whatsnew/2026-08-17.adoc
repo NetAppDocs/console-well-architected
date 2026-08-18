@@ -1,0 +1,69 @@
+=== FSx for ONTAP support in the well-architected dashboard in NetApp Console
+The well-architected dashboard in NetApp Console is available for Amazon FSx for NetApp ONTAP. 
+
+* link:https://docs.netapp.com/us-en/console-well-architected/fsx/configuration-analysis-fsx.html[Learn about the configuration analysis for FSx for ONTAP]
+
+=== Updated configuration names for FSx for ONTAP in the well-architected dashboard
+The well-architected dashboard in NetApp Console now includes new storage configuration names for FSx for ONTAP. 
+
+The following table lists the old configuration names and their corresponding new configuration names in the well-architected dashboard.
+
+[cols="1,1", options="header"]
+|===
+|Old configuration name
+|New configuration name
+
+|Schedule volumes backups
+|Volume backups
+
+|SSD capacity threshold
+|SSD capacity headroom
+
+|File capacity threshold
+|File capacity headroom
+
+|Long-term retention data reliability
+|Replication policy labels
+
+|Scheduled local snapshots
+|Snapshot policy
+
+|Delete unnecessary backups
+|Backup expiration
+
+|Delete unnecessary snapshots
+|Snapshot expiration    
+
+|Underutilized SSD capacity
+|Overprovisioned SSD capacity
+
+|Inactive block devices
+|Inactive block devices (LUN)
+
+|Optimize TCO by tiering cold data
+|Cold data tiering
+
+|Volume logical capacity reporting
+|Host-visible capacity reporting
+
+|FlexGroup volumes rebalance
+|Rebalance FlexGroup volumes
+
+|FlexVol volumes rebalance
+|Rebalance FlexVol volumes
+
+|Cache relationship write mode
+|FlexCache write mode
+
+|Optimize cache volume size
+|FlexCache replica size
+
+|Unauthorized access to volume
+|Unauthorized iSCSI volume access
+
+|ARP/AI disabled
+|Ransomware protection (ARP/AI)
+|===
+
+=== Well-architected issues displayed in NetApp Console Systems page    
+Notifications for well-architected issues are available for Cloud Volumes ONTAP in Microsoft Azure from the Storage management Systems page in the NetApp Console. This feature helps you quickly identify configuration issues in your Cloud Volumes ONTAP systems in Azure and navigate to the Workloads well-architected dashboard from the notification. 

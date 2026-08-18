@@ -4,10 +4,7 @@ The well-architected dashboard in NetApp Console provides a single view of your 
 
 Learn more about the link:https://docs.netapp.com/us-en/console-well-architected/learn-well-architected-dashboard.html[well-architected dashboard].
 
-The well-architected dashboard in the Console is available for the following storage systems:
-
-* link:https://docs.netapp.com/us-en/console-well-architected/fsx/configuration-analysis-fsx.html[Amazon FSx for NetApp ONTAP]
-* link:https://docs.netapp.com/us-en/console-well-architected/cvo/configuration-analysis-cvo.html[Cloud Volumes ONTAP in Microsoft Azure]
+The well-architected dashboard in the Console is available for link:https://docs.netapp.com/us-en/console-well-architected/cvo/configuration-analysis-cvo.html[Cloud Volumes ONTAP in Microsoft Azure.]
 
 === Build your own custom rules
 
