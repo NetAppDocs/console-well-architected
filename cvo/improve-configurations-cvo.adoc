@@ -26,6 +26,10 @@ Storage configuration requirements vary. You can dismiss the analysis of specifi
 
 * You must link:https://console.netapp.com/add-working-environment/choose-type[add a Cloud Volumes ONTAP system] to NetApp Console to view the well-architected status and recommendations for configuration issues.
 * link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html[You should deploy a Console agent] for the most comprehensive analysis of your system resources.
+* Allow outbound connectivity to the following endpoints:
++ 
+** \https://api.workloads.netapp.com
+** \https://ws.workloads.bluexp.netapp.com
 
 == View recommendations for configuration issues
 You can view recommendations for configuration issues after the daily analysis completes. Recommendations explain best practices and potential risks of unoptimized configurations. You can also download a CSV file of the recommendations.
