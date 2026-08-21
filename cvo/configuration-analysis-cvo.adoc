@@ -21,7 +21,12 @@ Key capabilities include:
 include::../_include/well-architected-workloads.adoc[]
 
 == Analysis requirements
-For a complete Cloud Volumes ONTAP system analysis, you must link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[deploy a NetApp Console agent^] to set up connectivity between your systems and the NetApp Console.
+For a complete Cloud Volumes ONTAP system analysis, you must link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[deploy a NetApp Console agent^] to set up connectivity between your systems and the NetApp Console. 
+
+You must also establish outbound connectivity to the following endpoints:
+
+* \https://api.workloads.netapp.com
+* \https://ws.workloads.bluexp.netapp.com
 
 == Best practices and recommendations for Cloud Volumes ONTAP systems
 
