@@ -16,6 +16,8 @@ indexpage:
           url: /fsx/configuration-analysis-fsx.html
         - title: Cloud Volumes ONTAP  
           url: /cvo/configuration-analysis-cvo.html
+        - title: Google Cloud NetApp Volumes
+          url: /gcnv/configuration-analysis-gcnv.html
     - title: Build your own rules
       links:
         - title: Learn about custom rules
