@@ -5,7 +5,7 @@ keywords: manage custom rules, disable rules, delete rules, rule catalog, byor
 summary: View, enable, disable, and delete custom architectural rules from the Rules catalog.
 ---
 
-= Manage custom rules
+= Manage custom rules in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
