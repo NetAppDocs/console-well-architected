@@ -4,7 +4,7 @@ permalink: cvo/configuration-analysis-cvo.html
 keywords: Cloud Volumes ONTAP, configuration issues, issues, improve, analyze, storage configuration, recommendation, recommendations
 summary: "The well-architected dashboard in NetApp Console analyzes Cloud Volumes ONTAP system configurations daily to determine if there are any configuration issues."  
 ---
-= Configuration analysis for Cloud Volumes ONTAP in NetApp Console
+= Configuration analysis for Cloud Volumes ONTAP
 :icons: font
 :imagesdir: ../media/
 
