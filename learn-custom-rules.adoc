@@ -5,7 +5,7 @@ keywords: custom rules, byor, bring your own rules, fsx, ontap, well architected
 summary: Learn how to define and manage your own architectural rules to enforce organizational standards alongside NetApp best practices.
 ---
 
-= Learn about custom rules
+= Learn about custom rules in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
