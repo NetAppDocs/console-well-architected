@@ -45,6 +45,10 @@ Schedule local snapshots for efficient backup and quick restores. Snapshots are 
 +
 The SSD storage tier capacity should not exceed 80% utilization. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your system. When capacity runs out, data volumes become read-only. Services trying to write new data also fail.
 
+* *Remote data replication*
++
+Protect your Cloud Volumes ONTAP data through remote replication. Remote data replication provides disaster recovery capabilities by maintaining synchronized copies of your data in different locations, ensuring business continuity in case of system failures or disasters.
+
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
 

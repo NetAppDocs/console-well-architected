@@ -1,0 +1,10 @@
+=== Remote data replication assessment for Cloud Volumes ONTAP
+A new assessment is available to check whether Cloud Volumes ONTAP data is protected with remote replication. It helps ensure your data protection plan follows best practices for disaster recovery and business continuity.
+
+link:https://docs.netapp.com/us-en/console-well-architected/cvo/configuration-analysis-cvo.html[Learn about the configuration analysis for Cloud Volumes ONTAP]
+
+=== Dismiss entire well-architected configurations
+You can now dismiss an entire recommended configuration from your dashboard. This gives you more control over which recommendations and assessments appear for your environment.
+
+=== Database workload recommendations in the well-architected dashboard
+Recommendations for database workloads using FSx for ONTAP are now available in the well-architected dashboard in NetApp Console. You can see the status of both your storage resources and database workloads in one place, giving you a complete view of your infrastructure health.
