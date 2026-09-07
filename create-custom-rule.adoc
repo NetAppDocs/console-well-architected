@@ -76,7 +76,7 @@ The AI might ask you to choose from several options to better understand what yo
 
 == Test the rule
 
-Before scheduling the rule, run a one-time test to see which resources it will affect.
+Before you save or schedule the rule, run a test to see which resources it will affect.
 
 .Steps
 
@@ -97,19 +97,21 @@ The system evaluates all resources in scope against your rule logic.
 
 == Save or schedule the rule
 
-After you test your rule, you can save it as a draft or set it to run regularly.
+After you validate your rule, you can save it as a draft or set it to run regularly.
 
 .Steps
 
 . Do one of the following:
 +
 * To schedule regular evaluation, set the evaluation frequency (minimum 1 hour, default 24 hours) and select *Schedule*. The rule is enabled and runs on the defined schedule.
-* To save without scheduling, select *Save as draft*. The rule is saved but not evaluated until you schedule it.
+* To save after validation without scheduling, select *Save as draft*. The rule is saved but not evaluated until you schedule it.
 * To discard the rule, select *Discard* to cancel rule creation and start over.
 
 .Result
 
 Your custom rule has been created and is listed in the rule catalog. If you set a schedule, it will check your FSx for ONTAP resources at the specified frequency.
+
+If you edit the rule later, the system will guide you through the same steps—chat, review, approval, and validation—before you save the updated version.
 
 == Troubleshooting
 

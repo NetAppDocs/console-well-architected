@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: manage-custom-rules.html
-keywords: manage custom rules, disable rules, delete rules, rule catalog, byor
-summary: View, enable, disable, and delete custom architectural rules from the Rules catalog.
+keywords: manage custom rules, edit custom rules, disable rules, delete rules, rule catalog, byor
+summary: View, edit, enable, disable, and delete custom architectural rules from the Rules catalog.
 ---
 
 = Manage custom rules in NetApp Console
@@ -13,7 +13,7 @@ summary: View, enable, disable, and delete custom architectural rules from the R
 :imagesdir: ./media/
 
 [.lead]
-The Rules catalog is one place to manage all your custom rules. You can see each rule's details, check its results, and turn it on or off.
+The Rules catalog is one place to manage all your custom rules. You can review rule details, edit rules, check results, and control whether rules run on a schedule.
 
 == View the Rules catalog
 
@@ -37,28 +37,39 @@ The results show which resources follow your rule and which do not.
 
 If the check failed for some items, read the error message to see why. Common reasons are connection problems, missing permissions, or a link that hasn't been set up.
 
-////
 == Edit a custom rule
 
-You can change a rule's logic, schedule, or other settings at any time. When you edit a rule, the rule builder opens with the rule's current settings.
+You can rename a rule at any time. You can also edit a rule's description, resource type, schedule, severity, condition logic, evaluation scope, and remediation guidance.
+
+You can rename a rule from the Rules catalog or from the rule details card. To edit any other rule setting, start from the Rules catalog.
 
 .Steps
 
 . In the Rules catalog, click the rule you want to edit.
-. Click *Edit*.
+. Do one of the following:
 +
-The rule switches to draft mode and the rule builder opens.
+* To rename the rule, update the rule name from the catalog or the rule details card.
+* To edit other rule settings, click *Edit*.
++
+The rule opens in chat mode with its full history.
 
-. Edit the rule prompt or use the conversation to improve the rule.  
-. Review the AI's updated interpretation and rule definition. 
-+ 
-The system shows what changed from the current rule, including any API calls or logic.  
-. Do one of the following depending on the changes made:
+. Ask for the changes you want to make, or update the request in chat.
 +
-* If minor changes were made, click *Save* to update the rule.
-* If significant changes were made, click *Validate rule* to test the changes, then click *Schedule* to save and schedule the rule, or click *Save as draft* to save without scheduling.
-* To discard the changes, click *Revert to previous version*. The rule returns to its original definition and leaves edit mode.
-////
+If creating the rule failed earlier, you can continue from that rule and update your request in the chat.
+
+. Review the updated explanation and summary of changes.
++
+The system shows what changed from the current rule before you save it.
+
+. If the rule is in draft mode, select *Validate rule* to test the updated logic.
+
+. Do one of the following:
++
+* To keep the changes, click *Save* to replace the current rule. If you changed the schedule, save the updated schedule. If you did not change the schedule, it will stay the same.
+
+* To discard the changes, click *Discard changes*. The rule returns to its previous version and exits edit mode.
+
+While you edit a rule, the rule appears as *Editing* for you. Other users can still see the scheduled rule, but scheduled runs will not start while the rule is being edited in draft mode.
 
 == Pause a rule
 
@@ -101,7 +112,17 @@ The system evaluates all resources in scope against the rule logic.
 
 Tests are audited and appear in the rule's evaluation history.
 
-== Understand execution status
+== Understand rule and execution status
+
+The Rules catalog shows both rule status and execution status.
+
+Rule status::
+*Draft* means the rule is saved but not yet scheduled.
+*In progress* means the rule is being created or validated.
+*Editing* means the rule is being updated in draft mode.
+*Scheduled* means the rule is active and runs on its schedule.
+*Paused* means the rule remains in the catalog but does not run.
+*Failed to create* means the rule was not completed and needs to be updated in chat before it can be saved.
 
 Execution status shows whether a rule ran successfully.
 
