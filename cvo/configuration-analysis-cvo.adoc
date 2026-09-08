@@ -9,7 +9,7 @@ summary: "The well-architected dashboard in NetApp Console analyzes Cloud Volume
 :imagesdir: ../media/
 
 [.lead]
-The well-architected dashboard in NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues with your Cloud Volumes ONTAP systems. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
+Workload Factory analyzes storage system configurations regularly to determine if there are any configuration issues with your Cloud Volumes ONTAP systems. When issues are found, the well-architected dashboard displays what the issues are and recommendations for what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 

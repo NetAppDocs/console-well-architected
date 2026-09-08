@@ -9,7 +9,7 @@ summary: "NetApp Console analyzes storage system configurations regularly to det
 :imagesdir: ../media/
 
 [.lead]
-The well-architected dashboard in NetApp Console analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices.
+Workload Factory analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, the well-architected dashboard in the NetApp Console displays what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices.
 
 Key capabilities include: 
 
