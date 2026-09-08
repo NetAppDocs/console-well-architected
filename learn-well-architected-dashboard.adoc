@@ -13,15 +13,15 @@ The well-architected dashboard in NetApp Console helps you maintain and operate 
 
 == How it works 
 
-The well-architected dashboard analyzes your configurations daily. The analysis provides well-architected status, insights, and recommendations. 
+Workload Factory analyzes your configurations daily. The analysis provides well-architected status, insights, and recommendations to help you optimize your storage environments. 
 
-After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the well-architected dashboard. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by the well-architected dashboard, while others require manual intervention. In this case, the well-architected dashboard provides detailed instructions to help you implement the recommended changes.
+After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the well-architected dashboard. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Workload Factory can fix some issues automatically, while others issues require manual intervention. In this case, the recommendation provides detailed instructions to help you implement the changes.
 
-You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. When you dismiss a specific configuration analysis, the well-architected dashboard does not include the configuration in the total optimization score.
+You can dismiss the analysis of configurations that do not apply to your environments. Dismissing configurations avoids unnecessary alerts and inaccurate optimization results. When you dismiss a specific configuration analysis, the well-architected dashboard does not include the configuration in the total optimization score.
 
 == Why it matters
 
-The well-architected dashboard in NetApp Console applies best practices to large storage, database, and VMware environments by combining ongoing assessment with recommendation insights and remediation. Automated remediation applied in the well-architected dashboard reduces human error, ensures uniform management, and preserves performance and reliability across your system infrastructures.
+The well-architected dashboard in NetApp Console applies best practices to large storage, database, and VMware environments by combining ongoing assessment with recommendation insights and remediation. Automated remediation in the well-architected dashboard reduces human error, ensures uniform management, and preserves performance and reliability across your system infrastructures.
 
 == Supported storage systems
 
