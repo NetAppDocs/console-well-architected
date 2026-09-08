@@ -9,23 +9,23 @@ summary: "The well-architected dashboard scans Amazon FSx for NetApp ONTAP confi
 :imagesdir: ../media/
 
 [.lead]
-Using configuration analysis insights and recommendations, leverage NetApp to implement best practices for your FSx for ONTAP file systems. You can easily review the well-architected status, learn about issues with your configurations, take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
+NetApp helps you implement best practices for your FSx for ONTAP file systems using configuration analysis insights and recommendations. You can review the well-architected status, learn about issues with your configurations, and get recommendations to improve the architecture of systems that aren't optimized for reliability, security, efficiency, performance, and cost.
 
 You can also dismiss the analysis of specific storage configurations that don't apply to your storage environment to avoid unnecessary alerts and inaccurate optimization results.
 
 link:configuration-analysis-fsx.html[Learn about the configuration analysis and well-architected status.]
 
 == About this task
-The well-architected dashboard analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. The daily analysis provides the well-architected status, insights, and recommendations. You can automatically fix configuration issues to meet best practices.
+Workload Factory analyzes Amazon FSx for NetApp ONTAP file system deployment configurations every day. The daily analysis provides the well-architected status, insights, and recommendations. You can automatically fix configuration issues to meet best practices.
 
-Link or Console agent connectivity allows the well-architected dashboard in the NetApp Console to complete a comprehensive scan of your file systems for issues with performance, data protection, and configurations. This ensures that you receive accurate insights and recommendations for optimizing your FSx for ONTAP file systems.
+Link or Console agent connectivity lets Workload Factory complete a comprehensive scan of your file systems for issues with performance, data protection, and configurations. As a result, you receive accurate insights and recommendations for optimizing your FSx for ONTAP file systems.
 
-Storage configuration requirements vary. You can dismiss the analysis of specific configurations that don't apply to your storage environment. This helps you avoid unnecessary alerts and inaccurate optimization results.
+Storage configuration requirements vary. You can dismiss the analysis of specific configurations that don't apply to your storage environment. Dismissing configurations that don't apply helps you avoid unnecessary alerts and inaccurate optimization results.
 
 == Before you begin
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account. 
-* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html[Install a Console agent^] or link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link] for the most comprehensive analysis of your file system resources.
+* You must link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html[install a Console agent^] or link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[connect to an FSx for ONTAP file system using a link] for the most comprehensive analysis of your file system resources.
 
 == Fix a configuration issue
 You can fix configuration issues for an FSx for ONTAP file system or for selected volumes in a file system. You can select one or more configurations to fix.
@@ -39,9 +39,7 @@ Fixing configuration issues can cause instance downtimes or service interruption
 . From the Well-architected dashboard, select *View* for any configuration. 
 +
 Make sure you review the recommendation carefully. The recommendation explains best practices and potential pitfalls of unoptimized configurations.
-. Select to *Fix*.
-+
-When *View and fix* is an option, select the impacted volumes to fix. 
+. Select *Fix* for a single volume or *View and fix* for multiple volumes. If you select *View and fix*, select the impacted volumes to fix.
 . Review the summary and action items in the dialog to learn what happens if you fix the issue. Some operations can cause instance downtimes or service interruptions. 
 . Select *Continue* to fix the configuration issue. 
 
@@ -109,7 +107,7 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *Well-architected*.
 . Select *Dismissed configurations*. 
-. Identify the volume(s) to reactivate from the configuration analysis. 
+. Identify the volumes to reactivate from the configuration analysis. 
 
 * For one volume: select the actions menu and then select *Reactivate volume*.
 * For multiple volumes: select the volumes and then select *Reactivate* next to Bulk action.

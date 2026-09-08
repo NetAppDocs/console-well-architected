@@ -9,7 +9,7 @@ summary: "The well-architected dashboard analyzes FSx for ONTAP file system conf
 :imagesdir: ../media/
 
 [.lead]
-The well-architected dashboard in NetApp Console analyzes storage system configurations regularly to determine if any there are any configuration issues with your Amazon FSx for NetApp ONTAP file systems. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
+Workload Factory analyzes storage system configurations regularly to determine if there are any configuration issues with your Amazon FSx for NetApp ONTAP file systems. When issues are found, the dashboard shows you what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
