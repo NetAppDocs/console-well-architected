@@ -49,11 +49,11 @@ You can rename a rule from the Rules catalog or from the rule details card. To e
 . Do one of the following:
 +
 * To rename the rule, update the rule name from the catalog or the rule details card.
-* To edit other rule settings, click *Edit*.
+* To edit other rule settings, select *Edit*.
 +
 The rule opens in chat mode with its full history.
 
-. Ask for the changes you want to make, or update the request in chat.
+. Update the request in the chat.
 +
 If creating the rule failed earlier, you can continue from that rule and update your request in the chat.
 
@@ -65,9 +65,9 @@ The system shows what changed from the current rule before you save it.
 
 . Do one of the following:
 +
-* To keep the changes, click *Save* to replace the current rule. If you changed the schedule, save the updated schedule. If you did not change the schedule, it will stay the same.
+* To keep the changes, click *Schedule* to replace the current rule. If you changed the schedule, save the updated schedule. If you did not change the schedule, it will stay the same.
 
-* To discard the changes, click *Discard changes*. The rule returns to its previous version and exits edit mode.
+* To discard the changes, click *Revert to previous version*. The rule returns to its previous version and exits edit mode.
 
 While you edit a rule, the rule appears as *Editing* for you. Other users can still see the scheduled rule, but scheduled runs will not start while the rule is being edited in draft mode.
 
