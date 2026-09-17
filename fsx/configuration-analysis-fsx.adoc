@@ -23,7 +23,7 @@ include::../_include/well-architected-workloads.adoc[]
 == Analysis requirements
 For a complete file system analysis, you must do the following: 
 
-* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[Deploy a NetApp Console agent^] or link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link^] to set up connectivity between the file system and NetApp Console.
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html#agent-console-deploy[Deploy a NetApp Console agent^] or link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[associate a link^] to set up connectivity between the file system and NetApp Console.
 
 * Grant _view, planning, and analysis_ permissions in your AWS account. 
 +
