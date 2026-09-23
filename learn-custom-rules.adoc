@@ -63,22 +63,17 @@ Condition logic:: The specific criteria to check.
 Evaluation scope:: Which resources are evaluated (all applicable resources in scope).
 Remediation logic:: Manual guidance for addressing non-compliant resources.
 
-You can update these rule attributes later by editing the rule from the Rules catalog.
-
 == Rule lifecycle
 
 Custom rules progress through the following states:
 
 In progress:: Creating or checking rules.
-Failed to create:: Could not create the rule. You can reopen the rule and continue editing in chat.
+Failed to create:: Could not create the rule.
 Draft:: Saved but not yet scheduled.
 Validated draft:: Passed validation and can be saved or scheduled.
-Editing:: Updating an existing rule in draft mode.
 Scheduled (Enabled):: Active and runs on the defined schedule.
 Disabled:: Paused but not deleted. Can be re-enabled.
 Deleted:: Permanently removed.
-
-Editing uses the same process as creating a rule: chat, review, and validation. If a scheduled run overlaps with an editing session, the run will not start while the rule is in draft mode.
 
 == Custom rule examples
 

@@ -111,8 +111,6 @@ After you validate your rule, you can save it as a draft or set it to run regula
 
 Your custom rule has been created and is listed in the rule catalog. If you set a schedule, it will check your FSx for ONTAP resources at the specified frequency.
 
-If you edit the rule later, the system will guide you through the same steps—chat, review, approval, and validation—before you save the updated version.
-
 == Troubleshooting
 
 No file systems available::
