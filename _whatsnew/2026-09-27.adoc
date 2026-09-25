@@ -1,8 +1,3 @@
-=== Edit and manage custom rules for FSx for ONTAP
-You can now edit FSx for ONTAP custom rules in the Rules catalog. You can update rule names and settings, review changes in chat, validate edits, and delete rules you no longer need.
-
-link:https://docs.netapp.com/us-en/console-well-architected/manage-custom-rules.html[Learn how to manage custom rules]
-
 === Discover Flex Unified resources in Workload Factory
 Workload Factory can now find Google Cloud NetApp Volumes Flex Unified Default-mode and ONTAP-mode storage pools and volumes through the ONTAP API proxy endpoint. These resources appear in inventory and are included in well-architected assessments and recommendations.
 
