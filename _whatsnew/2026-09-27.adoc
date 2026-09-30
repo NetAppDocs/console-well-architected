@@ -1,0 +1,17 @@
+=== Discover Flex Unified resources in Workload Factory
+Workload Factory can now find Google Cloud NetApp Volumes Flex Unified Default-mode and ONTAP-mode storage pools and volumes through the ONTAP API proxy endpoint. These resources appear in inventory and are included in well-architected assessments and recommendations.
+
+link:https://docs.netapp.com/us-en/console-well-architected/gcnv/configuration-analysis-gcnv.html[Learn about configuration analysis for Google Cloud NetApp Volumes]
+
+=== Enter Flex Unified systems from NetApp Console Canvas
+You can now select *Enter System* for discovered Google Cloud NetApp Volumes Flex Unified systems from NetApp Console Canvas. This opens the Resources page for the selected system so you can view associated storage pools and volumes by using the same workflow available for Default-mode systems.
+
+link:https://docs.netapp.com/us-en/console-well-architected/gcnv/configuration-analysis-gcnv.html[Learn about configuration analysis for Google Cloud NetApp Volumes]
+
+=== Well-architected assessments for Flex Unified resources
+The well-architected dashboard now evaluates Google Cloud NetApp Volumes Flex Unified storage pools and volumes for SSD capacity headroom, volume capacity headroom, and snapshot policy coverage. Results appear in the Google Cloud NetApp Volumes well-architected experience and identify resources in Default-mode or ONTAP-mode.
+
+link:https://docs.netapp.com/us-en/console-well-architected/gcnv/configuration-analysis-gcnv.html[Learn about configuration analysis for Google Cloud NetApp Volumes]
+
+=== Well-architected issues displayed in NetApp Console Systems page    
+Notifications for well-architected issues are available for Google Cloud NetApp Volumes from the Storage management Systems page in the NetApp Console. This feature helps you quickly identify configuration issues in your Google Cloud NetApp Volumes systems and navigate to the Workloads well-architected dashboard from the notification. 

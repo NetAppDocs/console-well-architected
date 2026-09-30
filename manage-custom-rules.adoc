@@ -13,7 +13,7 @@ summary: View, enable, disable, and delete custom architectural rules from the R
 :imagesdir: ./media/
 
 [.lead]
-The Rules catalog is one place to manage all your custom rules. You can see each rule's details, check its results, and turn it on or off.
+The Rules catalog is one place to manage all your custom rules. You can review rule details, check results, and control whether rules run on a schedule.
 
 == View the Rules catalog
 
@@ -36,29 +36,6 @@ The results show which resources follow your rule and which do not.
 . Select **View details** to see the results for each run.
 
 If the check failed for some items, read the error message to see why. Common reasons are connection problems, missing permissions, or a link that hasn't been set up.
-
-////
-== Edit a custom rule
-
-You can change a rule's logic, schedule, or other settings at any time. When you edit a rule, the rule builder opens with the rule's current settings.
-
-.Steps
-
-. In the Rules catalog, click the rule you want to edit.
-. Click *Edit*.
-+
-The rule switches to draft mode and the rule builder opens.
-
-. Edit the rule prompt or use the conversation to improve the rule.  
-. Review the AI's updated interpretation and rule definition. 
-+ 
-The system shows what changed from the current rule, including any API calls or logic.  
-. Do one of the following depending on the changes made:
-+
-* If minor changes were made, click *Save* to update the rule.
-* If significant changes were made, click *Validate rule* to test the changes, then click *Schedule* to save and schedule the rule, or click *Save as draft* to save without scheduling.
-* To discard the changes, click *Revert to previous version*. The rule returns to its original definition and leaves edit mode.
-////
 
 == Pause a rule
 
@@ -101,7 +78,16 @@ The system evaluates all resources in scope against the rule logic.
 
 Tests are audited and appear in the rule's evaluation history.
 
-== Understand execution status
+== Understand rule and execution status
+
+The Rules catalog shows both rule status and execution status.
+
+Rule status::
+*Draft* means the rule is saved but not yet scheduled.
+*In progress* means the rule is being created or validated.
+*Scheduled* means the rule is active and runs on its schedule.
+*Paused* means the rule remains in the catalog but does not run.
+*Failed to create* means the rule was not completed and needs to be updated in chat before it can be saved.
 
 Execution status shows whether a rule ran successfully.
 

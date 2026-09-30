@@ -58,6 +58,7 @@ Rule name:: A user-defined name for the rule.
 Description:: Your rationale for why this rule matters to your organization.
 Resource type:: The FSx resource to evaluate (file system, volume, or cache). Currently, one resource type per rule.
 Scheduler:: How often the rule is evaluated (minimum 1 hour, default 24 hours).
+Severity:: The importance level for the rule, such as warning or critical.
 Condition logic:: The specific criteria to check.
 Evaluation scope:: Which resources are evaluated (all applicable resources in scope).
 Remediation logic:: Manual guidance for addressing non-compliant resources.
@@ -66,11 +67,13 @@ Remediation logic:: Manual guidance for addressing non-compliant resources.
 
 Custom rules progress through the following states:
 
-Draft:: Rule is being created. No evaluation occurs.
-Dry-run:: One-time evaluation to preview which resources would be affected. Used for validation before scheduling.
-Scheduled (Enabled):: Rule is active and runs on the defined schedule.
-Disabled:: Rule is paused but not deleted. Can be re-enabled.
-Deleted:: Rule is permanently removed.
+In progress:: Creating or checking rules.
+Failed to create:: Could not create the rule.
+Draft:: Saved but not yet scheduled.
+Validated draft:: Passed validation and can be saved or scheduled.
+Scheduled (Enabled):: Active and runs on the defined schedule.
+Disabled:: Paused but not deleted. Can be re-enabled.
+Deleted:: Permanently removed.
 
 == Custom rule examples
 
