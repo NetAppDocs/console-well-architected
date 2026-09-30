@@ -9,7 +9,7 @@ summary: "NetApp Console analyzes storage system configurations regularly to det
 :imagesdir: ../media/
 
 [.lead]
-Workload Factory analyzes storage system configurations regularly to determine if there are any configuration issues. When issues are found, the well-architected dashboard in the NetApp Console displays what the issues are and explains what needs to change to ensure your storage systems achieve peak performance, cost efficiency, and compliance with best practices.
+The Well-architected dashboard in NetApp Console regularly checks your storage system settings for potential issues. If it finds any problems, it shows what they are and explains how to fix them so your storage systems can perform well, control costs, and follow best practices in both Default-mode and ONTAP-mode for Flex Unified Google Cloud NetApp Volumes environments.
 
 Key capabilities include: 
 
@@ -29,9 +29,9 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Lea
 
 == Best practices and recommendations for storage workloads
 
-Workload Factory assesses storage configurations against storage and ONTAP best practices and the Google Cloud Well-Architected Framework. The assessment also recommends improvements.  
+Workload Factory assesses storage configurations against storage and ONTAP best practices and the Google Cloud Well-Architected Framework. The assessment also recommends improvements for Google Cloud NetApp Volumes Default-mode resources and Flex Unified resources discovered through the ONTAP API proxy endpoint.
 
-The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, and _operational excellence_.
+The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_ and _operational excellence_. Assessment results can include a mode value of _Default-mode_ or _ONTAP-mode_.
 
 === Reliability 
 Reliability ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. 

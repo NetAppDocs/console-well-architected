@@ -9,25 +9,14 @@ summary: "Workload factory scans Google Cloud NetApp Volumes configurations prov
 :imagesdir: ../media/
 
 [.lead]
-NetApp helps you implement best practices for your Google Cloud NetApp Volumes storage pools using configuration analysis insights and recommendations. You can review the well-architected status, learn about issues with your configurations, and get recommendations to improve the architecture of any storage pools that aren't optimized for reliability, security, efficiency, performance, and cost.
+Using configuration analysis insights and recommendations, leverage NetApp to implement best practices for your Google Cloud NetApp Volumes storage pools and volumes running on Google Cloud storage. You can easily review the well-architected status, learn about issues with your configurations, and get recommendations to improve the architecture of resources that aren't optimized for reliability, security, performance, and cost.
 
 link:configuration-analysis-gcnv.html[Learn about the configuration analysis and well-architected status.]
 
 == About this task
-NetApp analyzes your Google Cloud NetApp Volumes storage pool configurations every day. The daily analysis provides the well-architected status, and insights and recommendations to help you understand configuration issues so that your storage pools meet best practices. 
+oogle Cloud NetApp Volumes storage pool and volume deployments in Google Cloud are analyzed daily. The daily analysis provides the well-architected status, and insights and recommendations to help you understand configuration issues so that your resources meet best practices.
 
-Link or Console agent connectivity lets Workload Factory complete a comprehensive scan of your file systems for issues with performance, data protection, and configurations. As a result, you receive accurate insights and recommendations for optimizing your Google Cloud NetApp Volumes storage pools.
-
-Storage configuration requirements vary. You can dismiss the analysis of specific configurations that don't apply to your storage environment. Dismissing configurations that don't apply helps you avoid unnecessary alerts and inaccurate optimization results.
-
-After the daily analysis completes, the well-architected dashboard displays the total number of well-architected resources, the number of resources in a critical state, and the number of resources in a warning state. Configurations are categorized by the pillars of the well-architected framework: reliability, operational excellence, cost optimization, performance efficiency, and security. The dashboard also includes a table that lists all configurations. For each configuration, the table shows:
-
-* The well-architected status
-* The severity
-* The category
-* The resource type (volume or storage pool)
-* Impacted resources
-* The option to view the recommendation when the configuration isn't optimized
+After the daily analysis completes, the dashboard displays the total number of well-architected resources, the number of resources in a critical state, and the number of resources in a warning state. Configurations are categorized by the pillars of the well-architected framework: reliability, operational excellence, cost optimization, performance efficiency, and security. The dashboard also includes a table that lists all configurations, the well-architected status of those configurations, the severity, category, resource type (volume or storage pool), impacted resources, and the option to view the recommendation when the configuration is not optimized. This includes Default-mode and ONTAP-mode.
 
 == Before you begin
 
@@ -35,6 +24,8 @@ After the daily analysis completes, the well-architected dashboard displays the 
 
 == View recommendations for configuration issues
 You can view recommendations for configuration issues after the daily analysis completes. Recommendations explain best practices and potential risks of unoptimized configurations. You can also download a CSV file of the recommendations.
+
+For Flex Unified environments, the recommendations can include SSD capacity headroom for storage pools, volume capacity headroom for volumes, and snapshot policy coverage for volumes.
 
 .Steps
 . Log in to the link:https://console.netapp.com/home[NetApp Console^].
