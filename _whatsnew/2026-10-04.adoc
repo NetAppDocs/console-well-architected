@@ -1,0 +1,4 @@
+=== Edit and manage custom rules
+You can now edit custom rules in the Rules catalog. You can update rule names and settings, review changes in chat, validate edits, and delete rules you no longer need.
+
+link:https://docs.netapp.com/us-en/console-well-architected/manage-custom-rules.html[Learn how to manage custom rules]

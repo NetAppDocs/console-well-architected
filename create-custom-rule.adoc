@@ -16,13 +16,11 @@ summary: Create a custom architectural rule using natural language to enforce yo
 Create custom rules by describing them in plain language. The AI rule builder turns your request into a validated rule that checks your FSx for ONTAP resources.
 
 .About this task
+The rule setup process guides you through each step: creating the rule, reviewing how the AI understood it, and checking the results before scheduling regular reviews. You stay in control throughout the process. The system suggests a rule based on your prompt, but nothing happens until you approve it.
 
-The rule creation process walks you through the steps: defining the rule, reviewing how the AI interpreted it, and checking the results before scheduling regular evaluations. You stay in control at every step. The system suggests a rule based on your prompt, but nothing moves forward until you confirm it.
-
-NOTE: If your account admin has turned off AI features, you'll see a message and won't be able to create custom rules. Contact your administrator or link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html[learn about AI administration^].
+NOTE: If your account admin has turned off AI features, you'll see a message and won't be able to create or edit custom rules. Contact your administrator or link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html[learn about AI administration^].
 
 .Before you begin
-
 * You have configured AWS credentials with read-only access.
 * You have ONTAP credentials with viewer permissions.
 * You have a link or agent configured for FSx for ONTAP connectivity.
@@ -31,51 +29,42 @@ NOTE: If your account admin has turned off AI features, you'll see a message and
 == Create a rule
 
 .Steps
-
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon] and then select *Well-architected*.
-. From the Well-architected menu, select *Rule builder*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon] and then select Well-architected.
+. From the Well-architected menu, select Rule builder.
 +
 When you open the rule builder, it shows sample prompts to help you write your custom rule. You can select *Copy prompt* to copy a sample prompt into the AI dialog text box.
-
 . In the *Create a rule* field, enter your rule description in natural language. Be as specific as possible about:
-
 * What resource type you're checking (file system, volume, or cache).
 * What condition you're validating.
 * What threshold defines compliance.
 * Why this rule matters (optional but recommended).
-
 . Select image:arrow.png[The menu icon is used to begin generating rules., width=18].
 +
 The AI analyzes your prompt and generates a rule definition.
 
 == Review the AI interpretation
-
 The rule builder displays:
 
-* *Parsed interpretation*: How the AI understood your prompt in plain language.
-* *Rule definition*: The structured rule including resource type, condition logic, and evaluation criteria.
-* *Reasoning*: Why the AI interpreted your prompt this way.
-* *Confidence indicator*: How confident the system is in the interpretation.
+Parsed interpretation:: How the AI understood your prompt in plain language.
+Rule definition:: The structured rule including resource type, condition logic, and evaluation criteria.
+Reasoning:: Why the AI interpreted your prompt this way.
+Confidence indicator:: How confident the system is in the interpretation.
 
 .Steps
+. Review the interpretation to make sure it matches what you intended.
 
-. Review the interpretation to make sure it matches what you intended. 
-+ 
-Check that the rule definition is correct.
+. Check that the rule definition is correct.
 If the interpretation is unclear or wrong, the system may ask questions such as:
 * Which resource should be checked?
 * What value or limit defines compliance?
 * How often should the rule run?
-
 . Respond to the AI's clarifying questions.
 +
 The AI might ask you to choose from several options to better understand what you need. Answer each question and select *Continue*, or select *Skip* to move past optional questions.
-
 . After answering all questions, select *Continue* to create your rule.
 
 == Test the rule
-
 Before you save or schedule the rule, run a test to see which resources it will affect.
 
 .Steps
@@ -83,51 +72,26 @@ Before you save or schedule the rule, run a test to see which resources it will 
 . Select *Validate rule*.
 +
 The system evaluates all resources in scope against your rule logic.
-
 . Review the validation results:
-** *Resources evaluated*: Total number of resources checked
-** *Compliant*: Resources that meet the rule criteria
-** *Non-compliant*: Resources that do not meet the criteria
-** *Failed evaluations*: Resources that could not be evaluated (with error details)
-
-. If some resources failed evaluation, review the error reasons:
-** *AWS credential errors*: Read-only permissions may be insufficient for certain resources
-** *Connectivity errors*: Link or agent might not be configured for specific file systems
-** *ONTAP permission errors*: The viewer user might not have access to certain resources
+** Resources evaluated: Total number of resources checked
+** Compliant: Resources that meet the rule criteria
+** Non-compliant: Resources that do not meet the criteria
+** Failed evaluations: Resources that could not be evaluated (with error details)
 
 == Save or schedule the rule
-
 After you validate your rule, you can save it as a draft or set it to run regularly.
 
 .Steps
 
 . Do one of the following:
 +
-* To schedule regular evaluation, set the evaluation frequency (minimum 1 hour, default 24 hours) and select *Schedule*. The rule is enabled and runs on the defined schedule.
+* To schedule regular evaluation, set the evaluation frequency and select *Schedule*. The rule is enabled and runs on the defined schedule.
 * To save after validation without scheduling, select *Save as draft*. The rule is saved but not evaluated until you schedule it.
-* To discard the rule, select *Discard* to cancel rule creation and start over.
+* To delete the rule, select *Delete*.
 
 .Result
-
 Your custom rule has been created and is listed in the rule catalog. If you set a schedule, it will check your FSx for ONTAP resources at the specified frequency.
-
-== Troubleshooting
-
-No file systems available::
-Set up your AWS credentials and make sure your environment has at least one FSx for ONTAP file system. The rule builder needs a file system to apply rules.
-
-Low confidence interpretation::
-More information is needed. Answer the questions or rewrite your prompt with clear details about the resource type, limits, and conditions.
-
-Partial validation failures::
-Check which resources failed and why. Common causes are missing link or agent settings, or not having enough permissions. Fix the problem, then validate again.
-
-Ambiguous prompt::
-Be more specific about what you want to check. Include the resource type, the condition, and the threshold. See the prompt examples for help.
-
-Rule targets multiple resource types::
-Create a separate rule for each resource type. Only one resource type per rule is supported.
+If you edit the rule later, the system will guide you through the same steps—chat, review, approval, and validation—before you save the updated version.
 
 == What to do next
-
 link:manage-custom-rules.html[Manage custom rules]
