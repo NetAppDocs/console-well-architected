@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: manage-custom-rules.html
-keywords: manage custom rules, disable rules, delete rules, rule catalog, byor
-summary: View, enable, disable, and delete custom architectural rules from the Rules catalog.
+keywords: manage rules, edit rules, disable rules, delete rules, rule catalog, byor
+summary: View, edit, enable, disable, and delete custom architectural rules from the Rules catalog.
 ---
 
 = Manage custom rules in NetApp Console
@@ -13,7 +13,7 @@ summary: View, enable, disable, and delete custom architectural rules from the R
 :imagesdir: ./media/
 
 [.lead]
-The Rules catalog is one place to manage all your custom rules. You can review rule details, check results, and control whether rules run on a schedule.
+The Rules catalog is one place to manage all your custom rules. You can review rule details, edit rules, check results, and control whether rules run on a schedule.
 
 == View the Rules catalog
 
@@ -36,6 +36,39 @@ The results show which resources follow your rule and which do not.
 . Select **View details** to see the results for each run.
 
 If the check failed for some items, read the error message to see why. Common reasons are connection problems, missing permissions, or a link that hasn't been set up.
+
+== Edit a custom rule
+
+You can rename a rule at any time. You can also edit a rule's description, resource type, schedule, severity, condition logic, evaluation scope, and remediation guidance.
+
+You can rename a rule from the Rules catalog or from the rule details card. To edit any other rule setting, start from the Rules catalog.
+
+.Steps
+
+. In the Rules catalog, click the rule you want to edit.
+. Do one of the following:
++
+* To rename the rule, update the rule name from the catalog or the rule details card.
+* To edit other rule settings, click *Edit*.
++
+The rule opens in chat mode with its full history.
+
+. Ask for the changes you want to make, or update the request in chat.
++
+If creating the rule failed earlier, you can continue from that rule and update your request in the chat.
+
+. Review the updated explanation and summary of changes.
++
+The system shows what changed from the current rule before you save it.
+
+. If the rule is in draft mode, select *Validate rule* to test the updated logic.
+
+. Do one of the following:
++
+* To keep the changes, click *Save* to replace the current rule. If you changed the schedule, save the updated schedule. If you did not change the schedule, it will stay the same.
+* To discard the changes, click *Discard changes*. The rule returns to its previous version and exits edit mode.
+
+While you edit a rule, the rule appears as *Editing* for you. Other users still see the current scheduled rule, and scheduled runs continue normally until you save the changes.
 
 == Pause a rule
 
@@ -77,31 +110,6 @@ The system evaluates all resources in scope against the rule logic.
 . Review the results to see current compliance status.
 
 Tests are audited and appear in the rule's evaluation history.
-
-== Understand rule and execution status
-
-The Rules catalog shows both rule status and execution status.
-
-Rule status::
-*Draft* means the rule is saved but not yet scheduled.
-*In progress* means the rule is being created or validated.
-*Scheduled* means the rule is active and runs on its schedule.
-*Paused* means the rule remains in the catalog but does not run.
-*Failed to create* means the rule was not completed and needs to be updated in chat before it can be saved.
-
-Execution status shows whether a rule ran successfully.
-
-Successful:: All relevant resources were checked and no errors were found.
-
-Partially successful:: Some resources were checked successfully, but others failed. Check the error details for the ones that could not be checked.
-
-Failed:: The evaluation did not finish. Common causes include AWS credential errors, network connection problems, or ONTAP permission issues.
-
-If a rule keeps failing or only partly succeeds, check that:
-
-* AWS credentials have read-only access to all resources.
-* Link and Console agent are configured for all file systems in scope.
-* The FSx for ONTAP viewer user has appropriate permissions.
 
 == What to do next
 
