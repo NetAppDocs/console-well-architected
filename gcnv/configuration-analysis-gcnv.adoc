@@ -9,7 +9,7 @@ summary: "NetApp Console analyzes storage system configurations regularly to det
 :imagesdir: ../media/
 
 [.lead]
-The Well-architected dashboard in NetApp Console regularly checks your storage system settings for potential issues. If it finds any problems, it shows what they are and explains how to fix them so your storage systems can perform well, control costs, and follow best practices in both Default-mode and ONTAP-mode for Flex Unified Google Cloud NetApp Volumes environments.
+The well-architected dashboard in NetApp Console regularly checks your storage system settings for potential issues. If it finds any problems, it shows what they are and explains how to fix them so your storage systems can perform well, control costs, and follow best practices in both Default-mode and ONTAP-mode for Flex Unified Google Cloud NetApp Volumes environments.
 
 Key capabilities include: 
 

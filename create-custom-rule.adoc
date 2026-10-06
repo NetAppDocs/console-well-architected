@@ -65,6 +65,7 @@ The AI might ask you to choose from several options to better understand what yo
 . After answering all questions, select *Continue* to create your rule.
 
 == Test the rule
+
 Before you save or schedule the rule, run a test to see which resources it will affect.
 
 .Steps
@@ -79,6 +80,7 @@ The system evaluates all resources in scope against your rule logic.
 ** Failed evaluations: Resources that could not be evaluated (with error details)
 
 == Save or schedule the rule
+
 After you validate your rule, you can save it as a draft or set it to run regularly.
 
 .Steps

@@ -14,7 +14,7 @@ Using configuration analysis insights and recommendations, leverage NetApp to im
 link:configuration-analysis-gcnv.html[Learn about the configuration analysis and well-architected status.]
 
 == About this task
-oogle Cloud NetApp Volumes storage pool and volume deployments in Google Cloud are analyzed daily. The daily analysis provides the well-architected status, and insights and recommendations to help you understand configuration issues so that your resources meet best practices.
+Google Cloud NetApp Volumes storage pool and volume deployments in Google Cloud are analyzed daily. The daily analysis provides the well-architected status, and insights and recommendations to help you understand configuration issues so that your resources meet best practices.
 
 After the daily analysis completes, the dashboard displays the total number of well-architected resources, the number of resources in a critical state, and the number of resources in a warning state. Configurations are categorized by the pillars of the well-architected framework: reliability, operational excellence, cost optimization, performance efficiency, and security. The dashboard also includes a table that lists all configurations, the well-architected status of those configurations, the severity, category, resource type (volume or storage pool), impacted resources, and the option to view the recommendation when the configuration is not optimized. This includes Default-mode and ONTAP-mode.
 
